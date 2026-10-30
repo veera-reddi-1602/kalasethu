@@ -1,0 +1,30 @@
+# Built binaries and packages
+*.apk
+*.aab
+*.ap_
+
+# Android build outputs & Gradle caches
+.gradle/
+build/
+**/build/
+**/.kotlin/
+**/local.properties
+.idea/
+*.iml
+*.ipr
+*.iws
+.gradle
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~

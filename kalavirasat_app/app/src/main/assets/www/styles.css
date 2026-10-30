@@ -1,0 +1,3392 @@
+/* ==========================================================
+   Kalavirasat (Artisans • Heritage • Global)
+   Exact Replica of the Reference Screenshot
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root {
+  --bg-primary: #FBF6EE;
+  --bg-card: #FFFFFF;
+  --primary-red: #7E2214;
+  --primary-red-hover: #681A0E;
+  --accent-gold: #C47A2B;
+  --accent-gold-light: #F9EEDD;
+  --ink-primary: #291811;
+  --ink-secondary: #6B5B52;
+  --ink-tertiary: #96867C;
+  --border-light: #EFE6D8;
+  --border-med: #DFD3C1;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--ink-primary);
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 78px; /* space for bottom nav */
+  user-select: none;
+}
+
+/* ==================== Top Header ==================== */
+.main-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-primary);
+  z-index: 100;
+  padding: 8px 16px 6px;
+  border-bottom: 1px solid rgba(223, 211, 193, 0.4);
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* Brand Logo */
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.brand-emblem-svg {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-red);
+  line-height: 1;
+  letter-spacing: -0.3px;
+}
+
+.brand-tagline {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  letter-spacing: 0.6px;
+  margin-top: 1px;
+}
+
+/* Header Right Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.location-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.location-pin {
+  font-size: 14px;
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.location-label {
+  font-size: 9px;
+  color: var(--ink-tertiary);
+  font-weight: 500;
+}
+
+.location-value {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-primary);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-primary);
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.header-icon-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--ink-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red-indicator-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 7px;
+  height: 7px;
+  background: #E11D48;
+  border-radius: 50%;
+  border: 1.5px solid var(--bg-primary);
+}
+
+.cart-counter-badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background: #E11D48;
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Search Bar */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1.5px solid #E2D9CC;
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.search-icon-left {
+  font-size: 14px;
+  color: #8C7B71;
+  margin-right: 8px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 12.5px;
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+}
+
+.search-input::placeholder {
+  color: #8C7B71;
+}
+
+.search-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #37261D;
+  font-size: 16px;
+}
+
+/* ==================== Circular Categories ==================== */
+.categories-container {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 14px 16px 12px;
+  scrollbar-width: none;
+}
+.categories-container::-webkit-scrollbar { display: none; }
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.category-circle-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #E6DCCD;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.category-circle-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-name-lbl {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #3B2A22;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ==================== Hero Banner ==================== */
+/* ==================== Trending Ticker Strip ==================== */
+.trending-ticker-strip {
+  background: linear-gradient(90deg, #5B1D0C 0%, #8C2F19 50%, #5B1D0C 100%);
+  color: #FFF3D6;
+  padding: 6px 0;
+  overflow: hidden;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(91, 29, 12, 0.2);
+}
+
+.trending-ticker-track {
+  display: inline-flex;
+  gap: 18px;
+  animation: tickerScroll 24s linear infinite;
+  will-change: transform;
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ticker-item-bold {
+  color: #FCD34D;
+  font-weight: 800;
+  background: rgba(251, 191, 36, 0.22);
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.ticker-dot-sep {
+  opacity: 0.6;
+  color: #FCD34D;
+}
+
+/* ==================== Hero Banner Carousel ==================== */
+.hero-banner-wrapper {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.hero-slider-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(116, 37, 18, 0.25);
+  background: #401509;
+}
+
+.hero-slider-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+
+.hero-banner-slide {
+  min-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background: linear-gradient(135deg, #742512 0%, #401509 100%);
+  padding: 16px 16px 14px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-slide-kondapalli {
+  background: linear-gradient(135deg, #8C2F19 0%, #4A1205 100%);
+}
+
+.hero-slide-artisan {
+  background: linear-gradient(135deg, #78350F 0%, #451A03 100%);
+}
+
+.hero-slide-pochampally {
+  background: linear-gradient(135deg, #831843 0%, #4A044E 100%);
+}
+
+.hero-slide-brass {
+  background: linear-gradient(135deg, #713F12 0%, #422006 100%);
+}
+
+.hero-badge-pill {
+  display: inline-block;
+  background: #DC2626;
+  color: #FFF;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-artisan-img-wrap {
+  width: 125px;
+  height: 135px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: #2D1108;
+}
+
+.hero-artisan-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-copy-block {
+  flex: 1;
+}
+
+.hero-title-main {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #FFF3D6;
+  margin-bottom: 6px;
+}
+
+.hero-subtitle-text {
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 12px;
+}
+
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--primary-red);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.hero-cta-btn:active {
+  transform: scale(0.96);
+  background: #B91C1C;
+}
+
+.hero-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D9CEBE;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  width: 18px;
+  border-radius: 3px;
+  background: var(--primary-red);
+}
+
+/* ==================== 5 Feature Trust Cards ==================== */
+.trust-badges-bar {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px;
+  overflow-x: auto;
+  margin-bottom: 22px;
+  scrollbar-width: none;
+}
+.trust-badges-bar::-webkit-scrollbar { display: none; }
+
+.trust-badge-card {
+  flex: 1;
+  min-width: 66px;
+  background: #FFFFFF;
+  border: 1px solid #EBE2D4;
+  border-radius: 12px;
+  padding: 9px 4px 7px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.trust-badge-icon {
+  font-size: 19px;
+}
+
+.trust-badge-lbl {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #42322A;
+  line-height: 1.15;
+}
+
+/* ==================== Section Headers ==================== */
+.section-headline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 16px;
+  margin-bottom: 12px;
+}
+
+.section-headline-title {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ink-primary);
+}
+
+.section-view-all {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-red);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* ==================== Popular Crafts ==================== */
+.popular-crafts-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 0 16px;
+  margin-bottom: 24px;
+  scrollbar-width: none;
+}
+.popular-crafts-row::-webkit-scrollbar { display: none; }
+
+.popular-craft-thumb-card {
+  width: 108px;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #EBE2D4;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+
+.popular-craft-img-box {
+  width: 100%;
+  height: 82px;
+  background: #F4ECE1;
+}
+
+.popular-craft-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-craft-caption {
+  padding: 6px 4px 8px;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--ink-primary);
+  line-height: 1.2;
+}
+
+/* ==================== Trending Products Grid ==================== */
+.trending-products-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 0 16px;
+  margin-bottom: 24px;
+  scrollbar-width: none;
+}
+.trending-products-container::-webkit-scrollbar { display: none; }
+
+.trending-item-card {
+  width: 154px;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  border: 1px solid #EBE2D4;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-card-top {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: #F4EDE4;
+}
+
+.trending-card-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-wishlist-heart {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.trending-info-area {
+  padding: 9px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.trending-item-name {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trending-item-price {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink-primary);
+  margin-bottom: 3px;
+}
+
+.trending-rating-line {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  color: var(--ink-secondary);
+  margin-bottom: 8px;
+}
+
+.star-symbol {
+  color: #F59E0B;
+  font-size: 12px;
+}
+
+.add-cart-red-btn {
+  width: 100%;
+  background: var(--primary-red);
+  color: #FFFFFF;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: auto;
+}
+
+/* ==================== Mission / Impact Banner ==================== */
+.mission-strip-wrapper {
+  padding: 0 16px;
+  margin-bottom: 24px;
+}
+
+.mission-strip-card {
+  background: #F6EDE0;
+  border: 1px dashed #DFCDB6;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mission-text-side h3 {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-red);
+  line-height: 1.15;
+}
+
+.mission-text-side p {
+  font-size: 10.5px;
+  color: var(--ink-secondary);
+  margin-top: 2px;
+}
+
+.mission-stats-group {
+  display: flex;
+  gap: 8px;
+}
+
+.stat-unit {
+  text-align: center;
+  font-size: 8.5px;
+  font-weight: 700;
+  color: #4C3C34;
+  line-height: 1.15;
+}
+
+.stat-icon {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 1px;
+}
+
+/* ==================== Bottom App Navigation ==================== */
+.bottom-nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top: 1px solid #EBE2D4;
+  display: flex;
+  justify-content: space-around;
+  padding: 7px 0 6px;
+  z-index: 200;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bottom-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #7A6960;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bottom-nav-link.active {
+  color: var(--primary-red);
+  font-weight: 800;
+}
+
+.nav-glyph {
+  font-size: 18px;
+}
+
+/* ==================== Product Detail Sheet ==================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 18, 12, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bottom-sheet-content {
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 600px;
+  max-height: 86vh;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  overflow-y: auto;
+  padding: 16px 16px 28px;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .bottom-sheet-content {
+  transform: translateY(0);
+}
+
+.sheet-handle-pill {
+  width: 36px;
+  height: 4px;
+  background: #E5DFD5;
+  border-radius: 2px;
+  margin: 0 auto 12px;
+}
+
+/* Toast */
+.app-toast-alert {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60px);
+  background: #291811;
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  z-index: 3000;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.app-toast-alert.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ==================== Flipkart-Style Product Detail Page (PDP) ==================== */
+.flipkart-pdp-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #F1F3F6;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.22s ease;
+}
+
+.flipkart-pdp-view.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Kalavirasat Teal PDP Top Header */
+.pdp-kalavirasat-header {
+  background: #0E4854;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.pdp-back-white-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.pdp-back-white-btn:active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.pdp-brand-center {
+  text-align: center;
+}
+
+.pdp-brand-logo-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdp-brand-title {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.4px;
+}
+
+.pdp-brand-tagline {
+  font-size: 10px;
+  color: #FDE68A;
+  letter-spacing: 0.3px;
+  margin-top: -2px;
+}
+
+.pdp-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdp-icon-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pdp-cart-icon-btn {
+  position: relative;
+}
+
+.pdp-cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background: #E53935;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 800;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 1.5px solid #0E4854;
+}
+
+/* Gallery Card matching reference image */
+.pdp-gallery-card {
+  position: relative;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.pdp-gallery-container {
+  position: relative;
+  width: 100%;
+}
+
+.pdp-gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pdp-floating-heart-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.pdp-3d-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.pdp-ar-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Store Row */
+.pdp-store-card {
+  background: #FFFFFF;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.pdp-store-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdp-store-icon {
+  font-size: 26px;
+}
+
+.pdp-store-name {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.pdp-arrow-gt {
+  color: #6B7280;
+  font-weight: 700;
+}
+
+.pdp-store-sub {
+  font-size: 11px;
+  color: #6B7280;
+}
+
+.pdp-store-rating {
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Product Title & Price Card */
+.pdp-title-card {
+  background: #FFFFFF;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.pdp-main-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.pdp-main-subtitle {
+  font-size: 13px;
+  color: #6B7280;
+  margin-bottom: 10px;
+}
+
+.pdp-badges-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pdp-gi-badge {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1D4ED8;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.pdp-stock-badge {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #059669;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.pdp-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.pdp-price-big {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.pdp-price-strike {
+  font-size: 15px;
+  color: #878787;
+  text-decoration: line-through;
+}
+
+.pdp-discount-pill {
+  background: #DCFCE7;
+  color: #15803D;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.pdp-tax-note {
+  font-size: 11px;
+  color: #878787;
+}
+
+/* 4 Craft Highlight Badges */
+.pdp-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 12px 14px;
+  background: #FFF9F2;
+  border-top: 1px solid #F3E8D8;
+  border-bottom: 1px solid #F3E8D8;
+  margin-bottom: 12px;
+}
+
+.pdp-highlight-pill {
+  text-align: center;
+}
+
+.pdp-hl-icon {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.pdp-hl-text {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #78350F;
+}
+
+/* About This Craft Card */
+.pdp-about-craft-card {
+  position: relative;
+  background: linear-gradient(135deg, #FFFDF8 0%, #FFF8EE 100%);
+  border: 1px solid #FDE68A;
+  border-radius: 14px;
+  margin: 0 14px 14px;
+  padding: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.08);
+}
+
+.pdp-temple-watermark {
+  position: absolute;
+  right: -10px;
+  top: 15px;
+  width: 130px;
+  height: 180px;
+  pointer-events: none;
+}
+
+.pdp-about-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 800;
+  color: #78350F;
+  margin-bottom: 8px;
+}
+
+.pdp-about-body-text {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #451A03;
+}
+
+.pdp-about-body-text p {
+  margin-bottom: 8px;
+}
+
+.pdp-about-expanded-text {
+  display: none;
+}
+
+.pdp-about-expanded-text.show {
+  display: block;
+}
+
+.pdp-read-more-btn {
+  background: #FEF3C7;
+  border: 1px solid #F59E0B;
+  color: #92400E;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+/* Accordions Group */
+.pdp-accordions-group {
+  background: #FFFFFF;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 12px;
+}
+
+.pdp-accordion-item {
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.pdp-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.pdp-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+
+.pdp-acc-title-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.pdp-acc-icon {
+  font-size: 18px;
+}
+
+.pdp-acc-chevron {
+  font-size: 16px;
+  color: #6B7280;
+  transition: transform 0.2s ease;
+}
+
+.pdp-accordion-panel {
+  display: none;
+  padding: 0 16px 14px 44px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #4B5563;
+}
+
+.pdp-accordion-panel.open {
+  display: block;
+}
+
+/* Floating Chat Action Button */
+.pdp-floating-chat-btn {
+  position: fixed;
+  bottom: 78px;
+  right: 14px;
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.pdp-chat-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #0E4854;
+  box-shadow: 0 4px 14px rgba(14, 72, 84, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pdp-chat-unread-dot {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #EF4444;
+  border: 1.5px solid #FFFFFF;
+}
+
+.pdp-chat-bubble-label {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #111827;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Updated Sticky Bottom Action Bar */
+.pdp-sticky-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #FFFFFF;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px 14px;
+  z-index: 10000;
+  align-items: center;
+}
+
+.pdp-add-cart-outline-btn {
+  background: #FFFFFF;
+  border: 1.5px solid #0E4854;
+  color: #0E4854;
+  font-size: 14.5px;
+  font-weight: 800;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.pdp-add-cart-outline-btn:active {
+  background: #F0FDF4;
+}
+
+.pdp-buy-now-gold-btn {
+  background: #F5B041;
+  border: none;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 800;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(245, 176, 65, 0.4);
+}
+
+.pdp-buy-now-gold-btn:active {
+  background: #E5A030;
+}
+
+/* Scrollable Container */
+.fk-scroll-body {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 74px;
+}
+
+/* Image Card */
+.fk-image-card {
+  position: relative;
+  background: #FFFFFF;
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.fk-img-floating-actions {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 5;
+}
+
+.fk-floating-circle-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.fk-floating-circle-btn:active {
+  background: #F3F4F6;
+}
+
+.fk-main-img-wrap {
+  width: 100%;
+  max-width: 320px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0;
+}
+
+.fk-hero-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.fk-image-rating-tag {
+  position: absolute;
+  bottom: 24px;
+  left: 16px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.fk-star-bold {
+  color: #15803D;
+}
+
+.fk-rating-count-sep {
+  color: #9CA3AF;
+}
+
+.fk-rating-count-num {
+  color: #6B7280;
+}
+
+.fk-image-slider-bar {
+  width: 100%;
+  height: 3px;
+  background: #E5E7EB;
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.fk-slider-bar-fill {
+  width: 33%;
+  height: 100%;
+  background: #111827;
+  border-radius: 2px;
+}
+
+/* Info Card */
+.fk-info-card {
+  background: #FFFFFF;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.fk-brand-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+.fk-product-title {
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #4B5563;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  font-family: var(--font-sans);
+}
+
+.fk-gi-tag-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fk-gi-pill {
+  background: #EBF8FF;
+  color: #007185;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #BAE6FD;
+}
+
+.fk-stock-pill {
+  background: #ECFDF5;
+  color: #059669;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.fk-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.fk-discount-green {
+  color: #388E3C;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.fk-mrp-strike {
+  color: #878787;
+  font-size: 15px;
+  text-decoration: line-through;
+}
+
+.fk-selling-price {
+  font-size: 24px;
+  font-weight: 800;
+  color: #212121;
+}
+
+.fk-tax-inclusive {
+  font-size: 11px;
+  color: #878787;
+}
+
+/* Sections */
+.fk-section-card {
+  background: #FFFFFF;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.fk-card-heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+/* Delivery Details */
+.fk-delivery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fk-delivery-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.fk-chevron-icon {
+  font-size: 16px;
+  color: #6B7280;
+  transition: transform 0.2s ease;
+}
+
+.fk-delivery-content {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.fk-pincode-check-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F9FAFB;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.fk-change-pin-btn {
+  background: none;
+  border: none;
+  color: #2874F0;
+  font-weight: 700;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.fk-delivery-promise {
+  font-size: 13.5px;
+  margin-bottom: 8px;
+}
+
+.fk-free-green {
+  color: #388E3C;
+  font-weight: 800;
+}
+
+.fk-trust-points {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #4B5563;
+}
+
+/* Specs Table */
+.fk-specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.fk-specs-table td {
+  padding: 7px 6px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.fk-specs-table td:first-child {
+  color: #878787;
+  width: 38%;
+}
+
+.fk-specs-table td:last-child {
+  color: #212121;
+  font-weight: 500;
+}
+
+/* Ratings & Reviews */
+.fk-reviews-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.fk-ratings-summary-sub {
+  font-size: 11.5px;
+  color: #878787;
+}
+
+.fk-rate-btn {
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #212121;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.fk-ratings-score-grid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 14px;
+}
+
+.fk-big-score-box {
+  text-align: center;
+  min-width: 80px;
+}
+
+.fk-big-score-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: #212121;
+  line-height: 1;
+}
+
+.fk-big-score-num .fk-star-symbol {
+  color: #388E3C;
+  font-size: 22px;
+}
+
+.fk-score-verified-text {
+  font-size: 11px;
+  color: #878787;
+  margin-top: 4px;
+}
+
+.fk-rating-bars-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.fk-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #6B7280;
+}
+
+.fk-bar-bg {
+  flex: 1;
+  height: 5px;
+  background: #E5E7EB;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.fk-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.green-bar { background: #388E3C; }
+.yellow-bar { background: #84CC16; }
+.orange-bar { background: #F59E0B; }
+.red-bar { background: #EF4444; }
+
+.fk-bar-count {
+  width: 18px;
+  text-align: right;
+  font-size: 10.5px;
+}
+
+.fk-review-card {
+  padding: 10px 0;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.fk-review-card:last-child {
+  border-bottom: none;
+}
+
+.fk-rev-rating-pill {
+  display: inline-block;
+  background: #388E3C;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+.fk-rev-headline {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 4px;
+}
+
+.fk-rev-body {
+  font-size: 12.5px;
+  color: #4B5563;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.fk-rev-author-line {
+  font-size: 11px;
+  color: #878787;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.fk-rev-author {
+  font-weight: 600;
+  color: #374151;
+}
+
+.fk-certified-tag {
+  color: #059669;
+  font-weight: 600;
+}
+
+.fk-rev-helpful-line {
+  display: flex;
+  gap: 14px;
+  font-size: 11.5px;
+  color: #6B7280;
+  margin-top: 4px;
+}
+
+.fk-helpful-btn {
+  cursor: pointer;
+}
+
+/* Similar Products */
+.fk-section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fk-view-all-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2874F0;
+  cursor: pointer;
+}
+
+.fk-related-scroll-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fk-related-card {
+  min-width: 140px;
+  width: 140px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.fk-related-img-wrap {
+  position: relative;
+  height: 110px;
+  background: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.fk-rel-discount {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: #388E3C;
+  color: #FFFFFF;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.fk-related-info {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fk-rel-title {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #212121;
+  height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.3;
+}
+
+.fk-rel-rating {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #388E3C;
+  margin: 3px 0;
+}
+
+.fk-rel-price-row {
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.fk-rel-price {
+  font-size: 13px;
+  font-weight: 800;
+  color: #212121;
+}
+
+.fk-rel-strike {
+  font-size: 10.5px;
+  color: #878787;
+  text-decoration: line-through;
+}
+
+.fk-rel-add-btn {
+  background: #FFFFFF;
+  border: 1px solid #2874F0;
+  color: #2874F0;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Sticky Bottom Action Bar (Flipkart Signature) */
+.fk-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #FFFFFF;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px 14px;
+  z-index: 10000;
+  align-items: center;
+}
+
+.fk-add-cart-btn {
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  color: #212121;
+  font-size: 14.5px;
+  font-weight: 700;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.fk-add-cart-btn:active {
+  background: #F3F4F6;
+}
+
+.fk-buy-now-btn {
+  background: #FFC200;
+  border: none;
+  color: #212121;
+  font-size: 15px;
+  font-weight: 800;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(255, 194, 0, 0.35);
+}
+
+.fk-buy-now-btn:active {
+  background: #E5AD00;
+}
+
+/* ==================== Saathi Voice Bridge Styles ==================== */
+.saathi-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.saathi-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.saathi-drawer-sheet {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background: #0B0F12;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: none;
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1);
+  color: #FFFFFF;
+}
+
+.saathi-modal-backdrop.active .saathi-drawer-sheet {
+  transform: translateY(0);
+}
+
+/* ==================== Live Chat Stream Section (Seamless Flow) ==================== */
+.saathi-live-chat-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.saathi-chat-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  padding: 2px 2px 6px;
+}
+
+.saathi-chat-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #94A3B8;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.saathi-online-status-pill {
+  font-size: 11px;
+  color: #A7F3D0;
+  background: rgba(16, 185, 129, 0.15);
+  border: none;
+  padding: 3px 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+}
+
+.saathi-green-dot {
+  width: 6px;
+  height: 6px;
+  background: #10B981;
+  border-radius: 50%;
+  animation: saathiDotGlow 1.5s infinite;
+}
+
+@keyframes saathiDotGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.saathi-chat-stream-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Buyer Sent Message Bubble (Seamless) */
+.saathi-chat-bubble.buyer-bubble {
+  background: #00545E;
+  border: none;
+  border-radius: 16px 16px 4px 16px;
+  padding: 12px 14px;
+  color: #F8FAFC;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.saathi-bubble-sender {
+  font-size: 11px;
+  font-weight: 700;
+  color: #38BDF8;
+  letter-spacing: 0.2px;
+}
+
+.saathi-buyer-text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+.saathi-bubble-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.saathi-chip {
+  background: rgba(56, 189, 248, 0.15);
+  color: #7DD3FC;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 6px;
+  font-size: 11px;
+  padding: 2px 8px;
+  font-weight: 600;
+}
+
+/* Buyer Voice Note Bar */
+.saathi-buyer-voice-bar {
+  background: #0B1E24;
+  border: 1px solid #007A87;
+  border-radius: 20px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.saathi-buyer-voice-bar:active {
+  background: #102B33;
+}
+
+.saathi-buyer-play-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #007A87;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.saathi-buyer-voice-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.saathi-buyer-voice-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.saathi-buyer-voice-meta {
+  font-size: 10.5px;
+  color: #A7F3D0;
+}
+
+.saathi-bubble-timestamp {
+  font-size: 10px;
+  color: #94A3B8;
+  text-align: right;
+  margin-top: 2px;
+}
+
+/* Chat Input Row */
+.saathi-chat-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #141E26;
+  border: 1px solid #2A3B4D;
+  border-radius: 26px;
+  padding: 6px 8px 6px 14px;
+  margin-top: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.saathi-chat-input-bar:focus-within {
+  border-color: #007A87;
+  box-shadow: 0 0 0 1px #007A87, 0 4px 14px rgba(0, 122, 135, 0.3);
+}
+
+.saathi-chat-input-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 4px 0;
+}
+
+.saathi-chat-input-field::placeholder {
+  color: #64748B;
+}
+
+.saathi-mic-circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1E293B;
+  border: 1px solid #334155;
+  color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.saathi-mic-circle-btn.recording {
+  background: #DC2626;
+  color: #FFFFFF;
+  animation: saathiPulse 1.2s infinite;
+}
+
+.saathi-send-circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #007A87;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.saathi-send-circle-btn:active {
+  transform: scale(0.92);
+  background: #0093A2;
+}
+
+/* Small Floating WhatsApp Icon at the bottom of the page */
+.saathi-wa-floating-btn {
+  position: fixed;
+  bottom: 82px;
+  right: 18px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #25D366;
+  border: 2.5px solid #FFFFFF;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10002;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+  animation: saathiWaPulse 2.8s infinite;
+}
+
+.saathi-wa-floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.65);
+}
+
+.saathi-wa-floating-btn:active {
+  transform: scale(0.94);
+}
+
+@keyframes saathiWaPulse {
+  0%, 100% { box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45); }
+  50% { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.75); }
+}
+
+.saathi-wa-dot {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 12px;
+  height: 12px;
+  background: #EF4444;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+/* Seller / Artisan Reply Card In Chat Screen (Seamless Flow) */
+.saathi-seller-reply-card {
+  background: #141E26;
+  border: none;
+  border-radius: 16px 16px 16px 4px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  animation: saathiFadeIn 0.35s ease;
+}
+
+@keyframes saathiFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.saathi-seller-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  padding-bottom: 2px;
+}
+
+.saathi-seller-avatar-wrap {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.saathi-seller-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #38BDF8;
+  background: #1E293B;
+}
+
+.saathi-online-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 11px;
+  height: 11px;
+  background: #10B981;
+  border: 2px solid #141E26;
+  border-radius: 50%;
+}
+
+.saathi-seller-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.saathi-seller-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.saathi-seller-badge {
+  background: #064E3B;
+  color: #A7F3D0;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 8px;
+}
+
+.saathi-seller-status {
+  font-size: 11px;
+  color: #9CA3AF;
+  margin-top: 1px;
+}
+
+.saathi-reply-time {
+  font-size: 11px;
+  color: #6B7280;
+}
+
+.saathi-seller-telugu-bubble {
+  background: #0C141B;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.saathi-seller-telugu-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6EE7B7;
+  font-weight: 500;
+}
+
+.saathi-seller-audio-bar {
+  background: #052E2B;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.saathi-seller-play-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #10B981;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.saathi-seller-audio-details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #A7F3D0;
+}
+
+.saathi-seller-english-translation {
+  background: #0C141B;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.saathi-trans-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  color: #38BDF8;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin-bottom: 3px;
+}
+
+.saathi-trans-content {
+  font-size: 13px;
+  color: #E5E7EB;
+  line-height: 1.45;
+}
+
+.saathi-seller-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.saathi-checkout-btn {
+  flex: 1;
+  background: #FFC200;
+  color: #111827;
+  border: none;
+  border-radius: 8px;
+  padding: 11px;
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.saathi-checkout-btn:active {
+  background: #E5AD00;
+}
+
+.saathi-open-wa-btn {
+  background: #1E293B;
+  color: #38BDF8;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-weight: 700;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+/* Saathi Header */
+.saathi-header {
+  background: #007A87;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.saathi-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.saathi-headphone-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.saathi-header-title {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.saathi-header-sub {
+  font-size: 12px;
+  color: #E0F2F1;
+  margin-top: 2px;
+}
+
+.saathi-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.saathi-verified-shield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A7F3D0;
+  font-size: 18px;
+}
+
+.saathi-close-btn {
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  color: #FFFFFF;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Saathi Scrollable Body */
+.saathi-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 14px 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.saathi-section-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #94A3B8;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Product Enquiry Summary Card (Seamless) */
+.saathi-product-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #141E26;
+  border: none;
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.saathi-product-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #1E293B;
+  padding: 3px;
+  border: none;
+  flex-shrink: 0;
+}
+
+.saathi-product-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.saathi-product-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.saathi-product-price {
+  font-size: 15px;
+  font-weight: 800;
+  color: #34D399;
+  margin-bottom: 1px;
+}
+
+.saathi-product-seller {
+  font-size: 11px;
+  color: #9CA3AF;
+}
+
+/* Quick Action Options 2x2 Grid (Seamless) */
+.saathi-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.saathi-option-card {
+  background: #141E26;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+
+.saathi-option-card:active,
+.saathi-option-card.selected {
+  background: #1A2833;
+  box-shadow: 0 0 0 1.5px #007A87;
+}
+
+.saathi-opt-icon {
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: #38BDF8;
+}
+
+.saathi-opt-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #F9FAFB;
+  line-height: 1.25;
+}
+
+.saathi-opt-sub {
+  font-size: 11px;
+  color: #9CA3AF;
+  line-height: 1.3;
+}
+
+/* Message Input Area */
+.saathi-input-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.saathi-textarea-wrap {
+  position: relative;
+  background: #131A20;
+  border: 1px solid #1F2937;
+  border-radius: 14px;
+  padding: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.saathi-textarea-wrap:focus-within {
+  border-color: #007A87;
+  box-shadow: 0 0 0 1px #007A87;
+}
+
+.saathi-textarea {
+  width: 100%;
+  height: 90px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #F3F4F6;
+  font-size: 13.5px;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: none;
+}
+
+.saathi-textarea::placeholder {
+  color: #6B7280;
+}
+
+.saathi-input-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.saathi-mic-btn {
+  background: #1F2937;
+  border: 1px solid #374151;
+  color: #E5E7EB;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.saathi-mic-btn.recording {
+  background: #DC2626;
+  color: #FFFFFF;
+  animation: saathiPulse 1.2s infinite;
+}
+
+@keyframes saathiPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.saathi-send-btn {
+  background: #007A87;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.saathi-send-btn:hover {
+  background: #0093A2;
+}
+
+.saathi-send-btn:active {
+  transform: scale(0.98);
+}
+
+/* Workflow Container Cards */
+.saathi-workflow-card {
+  background: #131A20;
+  border: 1px solid #1F2937;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.saathi-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 8px;
+}
+
+.saathi-card-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #38BDF8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.saathi-badge-pill {
+  font-size: 10.5px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: #064E3B;
+  color: #A7F3D0;
+  font-weight: 600;
+}
+
+/* Requirements Grid */
+.saathi-req-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  background: #0B0F12;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #1F2937;
+}
+
+.saathi-req-item {
+  font-size: 11.5px;
+  color: #D1D5DB;
+}
+
+.saathi-req-item strong {
+  color: #FCD34D;
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 1px;
+}
+
+/* Translation Preview */
+.saathi-trans-box {
+  background: #0B0F12;
+  border: 1px solid #23303D;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.saathi-trans-telugu {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6EE7B7;
+  font-family: inherit;
+  margin-bottom: 8px;
+}
+
+.saathi-trans-orig {
+  font-size: 11.5px;
+  color: #9CA3AF;
+  border-top: 1px dashed #1F2937;
+  padding-top: 8px;
+  line-height: 1.4;
+}
+
+/* Audio Player */
+.saathi-audio-player {
+  background: #0B0F12;
+  border: 1px solid #007A87;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.saathi-play-circle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #007A87;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.saathi-play-circle-btn:active {
+  transform: scale(0.92);
+}
+
+.saathi-audio-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.saathi-wave-bars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 22px;
+}
+
+.saathi-wave-bar {
+  width: 3px;
+  height: 6px;
+  background: #38BDF8;
+  border-radius: 2px;
+  transition: height 0.15s ease;
+}
+
+.saathi-audio-player.playing .saathi-wave-bar {
+  animation: saathiWave 0.8s infinite ease-in-out alternate;
+}
+
+.saathi-wave-bar:nth-child(2) { animation-delay: 0.1s; }
+.saathi-wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.saathi-wave-bar:nth-child(4) { animation-delay: 0.3s; }
+.saathi-wave-bar:nth-child(5) { animation-delay: 0.4s; }
+.saathi-wave-bar:nth-child(6) { animation-delay: 0.25s; }
+.saathi-wave-bar:nth-child(7) { animation-delay: 0.15s; }
+.saathi-wave-bar:nth-child(8) { animation-delay: 0.35s; }
+
+@keyframes saathiWave {
+  0% { height: 4px; }
+  100% { height: 20px; }
+}
+
+.saathi-audio-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #9CA3AF;
+}
+
+/* Delivery Confirmation Card */
+.saathi-delivery-card {
+  background: #064E3B;
+  border: 1px solid #059669;
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #ECFDF5;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.saathi-delivery-title {
+  font-weight: 700;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.saathi-delivery-sub {
+  font-size: 11px;
+  color: #A7F3D0;
+  line-height: 1.4;
+}
+
+.saathi-whatsapp-inbox-btn {
+  background: #25D366;
+  color: #075E54;
+  border: none;
+  font-weight: 800;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.saathi-whatsapp-inbox-btn:active {
+  background: #1EBE5D;
+}
+
+/* ==================== WhatsApp Artisan Demo Inbox Modal (Full Screen) ==================== */
+.wa-inbox-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000;
+  z-index: 999999 !important;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.wa-inbox-backdrop.active {
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.wa-phone-container {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background: #ECE5DD;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: none;
+  position: relative;
+}
+
+/* WhatsApp Green Top Header */
+.wa-header {
+  background: #075E54;
+  color: #FFFFFF;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.wa-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wa-back-btn {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.wa-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #128C7E;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.wa-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.wa-user-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.wa-user-status {
+  font-size: 11px;
+  color: #C8E6C9;
+}
+
+.wa-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+
+.wa-header-icon {
+  cursor: pointer;
+}
+
+/* WhatsApp Messages Area */
+.wa-chat-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #EFEAE2;
+  background-image: radial-gradient(#D6CEBE 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.wa-date-pill {
+  align-self: center;
+  background: #E1F3FB;
+  color: #4A5568;
+  font-size: 10.5px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.wa-security-notice {
+  align-self: center;
+  background: #FFF3C4;
+  color: #5D4037;
+  font-size: 10.5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 90%;
+  line-height: 1.35;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Incoming Message Bubble */
+.wa-bubble-incoming {
+  align-self: flex-start;
+  background: #FFFFFF;
+  border-radius: 0 12px 12px 12px;
+  padding: 10px 12px;
+  max-width: 88%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.wa-bubble-product {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #F8F9FA;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #E9ECEF;
+}
+
+.wa-bubble-product img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+.wa-bubble-prod-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #212529;
+}
+
+.wa-bubble-prod-price {
+  font-size: 12px;
+  font-weight: 800;
+  color: #075E54;
+}
+
+.wa-bubble-pill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.wa-pill-tag {
+  background: #E8F5E9;
+  color: #2E7D32;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+
+.wa-bubble-telugu-text {
+  font-size: 13.5px;
+  color: #111827;
+  line-height: 1.5;
+  margin: 2px 0;
+}
+
+/* WhatsApp Voice Note Bar */
+.wa-voice-widget {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 20px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wa-vn-play-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #25D366;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.wa-vn-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: #D1D5DB;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wa-vn-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #075E54;
+  transition: width 0.1s linear;
+}
+
+.wa-vn-time {
+  font-size: 11px;
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.wa-bubble-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  font-size: 10px;
+  color: #9CA3AF;
+  margin-top: -2px;
+}
+
+.wa-double-check {
+  color: #34B7F1;
+  font-weight: 700;
+}
+
+/* Outgoing Message Bubble (Artisan's reply) */
+.wa-bubble-outgoing {
+  align-self: flex-end;
+  background: #DCF8C6;
+  border-radius: 12px 0 12px 12px;
+  padding: 10px 12px;
+  max-width: 86%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wa-bubble-out-text {
+  font-size: 13.5px;
+  color: #111827;
+  line-height: 1.5;
+}
+
+.wa-bubble-out-trans {
+  font-size: 11px;
+  color: #4B5563;
+  border-top: 1px dashed rgba(0, 0, 0, 0.15);
+  padding-top: 5px;
+}
+
+/* Artisan Reply Suggestions & Bottom Bar */
+.wa-reply-section {
+  background: #F0F2F5;
+  border-top: 1px solid #D1D7DB;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.wa-quick-replies-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #54656F;
+}
+
+.wa-chips-row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.wa-chip-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E293B;
+  font-size: 11.5px;
+  padding: 6px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.wa-chip-btn:hover {
+  background: #E8F5E9;
+  border-color: #25D366;
+}
+
+.wa-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wa-text-input {
+  flex: 1;
+  background: #FFFFFF;
+  border: 1px solid #D1D7DB;
+  border-radius: 20px;
+  padding: 9px 14px;
+  font-size: 13px;
+  outline: none;
+}
+
+.wa-send-circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00A884;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+

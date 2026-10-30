@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kalavirasat — Artisans • Heritage • Global</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Main Header -->
+  <header class="main-header">
+    <div class="header-row">
+      <!-- Brand Logo & Title -->
+      <div class="brand-group">
+        <svg class="brand-emblem-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" rx="20" fill="url(#paint0_radial)"/>
+          <path d="M50 15L64 36H36L50 15Z" fill="#FFF3D6"/>
+          <path d="M50 20L58 32H42L50 20Z" fill="#C47A2B"/>
+          <rect x="30" y="36" width="40" height="10" rx="2" fill="#FFF3D6"/>
+          <path d="M26 46L30 62H70L74 46H26Z" fill="#FFF3D6"/>
+          <rect x="36" y="50" width="8" height="12" rx="2" fill="#7E2214"/>
+          <rect x="56" y="50" width="8" height="12" rx="2" fill="#7E2214"/>
+          <rect x="22" y="62" width="56" height="10" rx="3" fill="#FFF3D6"/>
+          <circle cx="32" cy="78" r="9" fill="#FFF3D6"/>
+          <circle cx="32" cy="78" r="4" fill="#7E2214"/>
+          <circle cx="68" cy="78" r="9" fill="#FFF3D6"/>
+          <circle cx="68" cy="78" r="4" fill="#7E2214"/>
+          <defs>
+            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50 50) rotate(90) scale(50)">
+              <stop stop-color="#D98A38"/>
+              <stop offset="1" stop-color="#7E2214"/>
+            </radialGradient>
+          </defs>
+        </svg>
+
+        <div class="brand-titles">
+          <span class="brand-name">Kalavirasat</span>
+          <span class="brand-tagline">Artisans • Heritage • Global</span>
+        </div>
+      </div>
+
+      <!-- Header Right Controls -->
+      <div class="header-actions">
+        <div class="location-dropdown" id="locBtn">
+          <span class="location-pin">📍</span>
+          <div class="location-text">
+            <span class="location-label">Deliver to</span>
+            <span class="location-value">Eluru, Andhra Pradesh ▾</span>
+          </div>
+        </div>
+
+        <div class="lang-dropdown" id="langBtn">
+          <span>文A</span>
+          <span>తెలుగు ▾</span>
+        </div>
+
+        <button class="header-icon-btn" id="notifBtn" aria-label="Notifications">
+          <span>🔔</span>
+          <span class="red-indicator-dot"></span>
+        </button>
+
+        <button class="header-icon-btn" id="cartHeaderBtn" aria-label="Shopping Cart">
+          <span>🛒</span>
+          <span class="cart-counter-badge" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-wrapper">
+      <span class="search-icon-left">🔍</span>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search for handmade products, artisans, crafts..." autocomplete="off" />
+      <div class="search-right-icons">
+        <span style="cursor: pointer;" id="micBtn">🎙️</span>
+        <span style="cursor: pointer;" id="scannerBtn">🔲</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Horizontal Circular Categories (Matching the 7 categories from the screenshot) -->
+  <section class="categories-container" id="categoryIconsRow">
+    <div class="category-item" onclick="window.kalaApp.filterByCategory('Handicrafts')">
+      <div class="category-circle-thumb">
+        <!-- Terracotta Pot -->
+        <svg viewBox="0 0 80 80" width="100%" height="100%">
+          <rect width="80" height="80" fill="#FBF0DF"/>
+          <path d="M40 18C34 18 31 22 31 25H49C49 22 46 18 40 18Z" fill="#A84B29"/>
+          <path d="M28 26H52L56 34C60 42 60 52 53 60C48 65 32 65 27 60C20 52 20 42 24 34L28 26Z" fill="#C25A32"/>
+          <path d="M25 40C35 44 45 44 55 40" stroke="#FFF0DF" stroke-width="2" stroke-linecap="round"/>
+          <path d="M23 48C33 52 47 52 57 48" stroke="#E6A07E" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="40" cy="15" r="3.5" fill="#C25A32"/>
+        </svg>
+      </div>
+      <span class="category-name-lbl">Handicrafts</span>
+    </div>
+
+    <div class="category-item" onclick="window.kalaApp.filterByCategory('Textiles')">
+      <div class="category-circle-thumb">
+        <!-- Textiles Fabric Roll -->
+        <svg viewBox="0 0 80 80" width="100%" height="100%">
+          <rect width="80" height="80" fill="#FDF0ED"/>
+          <ellipse cx="40" cy="28" rx="24" ry="10" fill="#2B4C7E"/>
+          <path d="M16 28V46C16 52 27 56 40 56C53 56 64 52 64 46V28C64 34 53 38 40 38C27 38 16 34 16 28Z" fill="#8C224A"/>
+          <path d="M16 42C26 47 54 47 64 42" stroke="#E5B25D" stroke-width="2" stroke-dasharray="4 2"/>
+          <path d="M16 34C26 39 54 39 64 34" stroke="#E5B25D" stroke-width="1.5"/>
+          <path d="M16 46V54C16 60 27 64 40 64C53 64 64 60 64 54V46C64 52 53 56 40 56C27 56 16 52 16 46Z" fill="#6B1435"/>
+        </svg>
+      </div>
+      <span class="category-name-lbl">Textiles</span>
+    </div>
+
+    <div class="category-item" onclick="window.kalaApp.filterByCategory('Paintings')">
+      <div class="category-circle-thumb">
+        <!-- Madhubani Art Face -->
+        <svg viewBox="0 0 80 80" width="100%" height="100%">
+          <rect width="80" height="80" fill="#FFF7ED"/>
+          <circle cx="40" cy="40" r="30" fill="#FDE68A"/>
+          <!-- Crown & hair -->
+          <path d="M22 36C25 24 35 18 45 20C55 22 58 32 58 36" fill="#1E293B"/>
+          <!-- Profile face -->
+          <path d="M34 32C37 32 40 35 41 38C44 38 47 41 46 44C44 47 41 48 39 51C37 54 34 55 31 54" fill="#F59E0B"/>
+          <!-- Big lotus eye -->
+          <ellipse cx="44" cy="38" rx="7" ry="4" fill="#FFF"/>
+          <circle cx="44" cy="38" r="2.5" fill="#000"/>
+          <path d="M37 36C42 33 48 34 52 37" stroke="#000" stroke-width="1.5" fill="none"/>
+          <!-- Gold nose ring & earring -->
+          <circle cx="50" cy="44" r="5" stroke="#DC2626" stroke-width="1.5" fill="none"/>
+          <circle cx="32" cy="46" r="4" fill="#DC2626"/>
+        </svg>
+      </div>
+      <span class="category-name-lbl">Paintings</span>
+    </div>
+
+    <div class="category-item" onclick="window.kalaApp.filterByCategory('Wood Crafts')">
+      <div class="category-circle-thumb">
+        <!-- Wooden Elephant -->
+        <svg viewBox="0 0 80 80" width="100%" height="100%">
+          <rect width="80" height="80" fill="#F5EFE6"/>
+          <ellipse cx="42" cy="44" rx="20" ry="15" fill="#8B4513"/>
+          <circle cx="28" cy="36" r="12" fill="#A0522D"/>
+          <path d="M22 42C20 48 21 54 26 56C27 57 28 56 27 54C25 52 24 48 25 43" stroke="#8B4513" stroke-width="4" stroke-linecap="round"/>
+          <ellipse cx="32" cy="36" rx="6" ry="9" fill="#CD853F"/>
+          <!-- Howdah / Saddle -->
+          <rect x="36" y="28" width="14" height="6" rx="2" fill="#DC2626"/>
+          <rect x="38" y="24" width="10" height="4" rx="1" fill="#F59E0B"/>
+          <!-- Legs -->
+          <rect x="28" y="52" width="6" height="13" rx="3" fill="#8B4513"/>
+          <rect x="48" y="52" width="6" height="13" rx="3" fill="#8B4513"/>
+        </svg>
+      </div>
+      <span class="category-name-lbl">Wood Crafts</span>
+    </div>
+
+    <div class="category-item" onclick="window.kalaApp.filterByCategory('Metal Crafts')">
+      <div class="category-circle-thumb">
+        <!-- Brass Diya Lamp -->
+        <svg viewBox="0 0 80 80" width="100%" height="100%">
+          <rect width="80" height="80" fill="#FEF3C7"/>
+          <!-- Base -->
+          <ellipse cx="40" cy="65" rx="18" ry="5" fill="#D97706"/>
+          <path d="M37 63L38 42H42L43 63" fill="#F59E0B"/>
+          <!-- Main Bowl -->
+          <ellipse cx="40" cy="42" rx="16" ry="6" fill="#FBBF24"/>
+          <ellipse cx="40" cy="40" rx="14" ry="4" fill="#D97706"/>
+          <!-- Stem & Top Diya -->
+          <rect x="38.5" y="28" width="3" height="12" fill="#D97706"/>
+          <ellipse cx="40" cy="28" rx="9" ry="3.5" fill="#FBBF24"/>
+          <!-- Flame -->
+          <path d="M40 12C42 16 45 20 40 26C35 20 38 16 40 12Z" fill="#EF4444"/>
+          <path d="M40 16C41 18 43 21 40 25C37 21 39 18 40 16Z" fill="#FCD34D"/>
+        </svg>
+      </div>
+      <span class="category-name-lbl">Metal Crafts</span>
+    </div>
+
+    <div class="category-item" onclick="window.kalaApp.filterByCategory('Tribal Arts')">
+      <div class="category-circle-thumb">
+        <!-- Tribal Mask -->
+        <svg viewBox="0 0 80 80" width="100%" height="100%">
+          <rect width="80" height="80" fill="#FEE2E2"/>
+          <path d="M26 22H54L50 62C50 65 40 68 40 68C40 68 30 65 30 62L26 22Z" fill="#DC2626"/>
+          <!-- Tribal painted stripes -->
+          <path d="M28 26L40 38L52 26" stroke="#FEF08A" stroke-width="3" fill="none"/>
+          <ellipse cx="34" cy="38" rx="4" ry="2" fill="#000"/>
+          <ellipse cx="46" cy="38" rx="4" ry="2" fill="#000"/>
+          <polygon points="40,42 36,52 44,52" fill="#FFF"/>
+          <rect x="34" y="56" width="12" height="3" fill="#FEF08A"/>
+        </svg>
+      </div>
+      <span class="category-name-lbl">Tribal Arts</span>
+    </div>
+
+    <div class="category-item" onclick="window.kalaApp.filterByCategory('All Categories')">
+      <div class="category-circle-thumb" style="background:#F6EDE0;">
+        <span style="font-size:24px; color:#5B493F;">▦</span>
+      </div>
+      <span class="category-name-lbl">All Categories</span>
+    </div>
+  </section>
+
+  <!-- Top Moving Ticker Bar Highlighting Kondapalli Toys as Trending -->
+  <div class="trending-ticker-strip">
+    <div class="trending-ticker-track">
+      <div class="ticker-item"><span class="ticker-item-bold">🔥 TRENDING</span> <span>Kondapalli Toys (GI Tagged)</span></div>
+      <span class="ticker-dot-sep">✦</span>
+      <div class="ticker-item"><span>400-Year Heritage Sacred Wood Craft</span></div>
+      <span class="ticker-dot-sep">✦</span>
+      <div class="ticker-item"><span class="ticker-item-bold">⭐ 4.9 RATING</span> <span>1,200+ Art Collectors</span></div>
+      <span class="ticker-dot-sep">✦</span>
+      <div class="ticker-item"><span>Direct From Krishna District Artisans</span></div>
+      <span class="ticker-dot-sep">✦</span>
+      <div class="ticker-item"><span class="ticker-item-bold">🔥 TRENDING</span> <span>Kondapalli Toys (GI Tagged)</span></div>
+      <span class="ticker-dot-sep">✦</span>
+      <div class="ticker-item"><span>400-Year Heritage Sacred Wood Craft</span></div>
+      <span class="ticker-dot-sep">✦</span>
+      <div class="ticker-item"><span class="ticker-item-bold">⭐ 4.9 RATING</span> <span>1,200+ Art Collectors</span></div>
+      <span class="ticker-dot-sep">✦</span>
+      <div class="ticker-item"><span>Direct From Krishna District Artisans</span></div>
+    </div>
+  </div>
+
+  <!-- Hero Feature Carousel Banner (Kondapalli Toys as Trending) -->
+  <section class="hero-banner-wrapper">
+    <div class="hero-slider-container">
+      <div class="hero-slider-track" id="heroSliderTrack">
+        <!-- Slide 1: Kondapalli Toys as Trending -->
+        <div class="hero-banner-slide hero-slide-kondapalli" onclick="window.kalaApp.openFlipkartPdp()" style="cursor:pointer;">
+          <!-- Background decorative motif watermark -->
+          <svg style="position:absolute; right:-20px; top:-10px; width:190px; height:190px; opacity:0.18; pointer-events:none;" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" stroke="#FFF" stroke-width="2" fill="none"/>
+            <ellipse cx="100" cy="100" rx="90" ry="45" stroke="#FFF" stroke-width="1.5" fill="none"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#FFF" stroke-width="1.5"/>
+            <path d="M120 40L145 35L150 48L135 52Z" fill="#FFF"/>
+          </svg>
+
+          <div class="hero-artisan-img-wrap">
+            <!-- Authentic Kondapalli Dancing Doll (Aata Bomma) & Woodcraft -->
+            <svg viewBox="0 0 125 135" width="100%" height="100%">
+              <rect width="125" height="135" fill="#FEF3C7"/>
+              <!-- Base pedestal -->
+              <ellipse cx="62" cy="120" rx="36" ry="10" fill="#92400E"/>
+              <ellipse cx="62" cy="116" rx="34" ry="8" fill="#D97706"/>
+              <ellipse cx="62" cy="113" rx="30" ry="6" fill="#FDE68A"/>
+              <!-- Kondapalli Dancing Doll (Aata Bomma) Bell-shaped flared skirt -->
+              <path d="M36 112 C36 82 46 64 62 64 C78 64 88 82 88 112 Z" fill="#DC2626"/>
+              <!-- Golden patterns & floral embroidery on skirt -->
+              <path d="M40 96 Q62 104 84 96" stroke="#FBBF24" stroke-width="3" fill="none"/>
+              <path d="M44 104 Q62 112 80 104" stroke="#FBBF24" stroke-width="2" fill="none"/>
+              <circle cx="50" cy="85" r="3" fill="#FBBF24"/>
+              <circle cx="62" cy="88" r="3.5" fill="#FBBF24"/>
+              <circle cx="74" cy="85" r="3" fill="#FBBF24"/>
+              <!-- Choli / Blouse -->
+              <path d="M50 48 H74 L78 65 H46 Z" fill="#15803D"/>
+              <path d="M54 48 L62 58 L70 48" stroke="#FBBF24" stroke-width="2" fill="none"/>
+              <!-- Dancing Doll poised hands -->
+              <path d="M48 52 C38 52 30 58 32 66 C33 70 38 68 44 60" fill="#FDE047" stroke="#B45309" stroke-width="1"/>
+              <path d="M76 52 C86 52 94 58 92 66 C91 70 86 68 80 60" fill="#FDE047" stroke="#B45309" stroke-width="1"/>
+              <!-- Bobble neck pivot -->
+              <line x1="62" y1="44" x2="62" y2="48" stroke="#78350F" stroke-width="3"/>
+              <!-- Face of Dancing Doll -->
+              <circle cx="62" cy="34" r="14" fill="#FDE047"/>
+              <ellipse cx="57" cy="33" rx="3" ry="2" fill="#FFF"/>
+              <circle cx="57" cy="33" r="1.3" fill="#000"/>
+              <ellipse cx="67" cy="33" rx="3" ry="2" fill="#FFF"/>
+              <circle cx="67" cy="33" r="1.3" fill="#000"/>
+              <circle cx="62" cy="31" r="1.8" fill="#DC2626"/>
+              <path d="M59 38 Q62 42 65 38" stroke="#DC2626" stroke-width="1.8" fill="none"/>
+              <!-- Traditional Kondapalli Mukut (Crown) -->
+              <path d="M50 25 C50 18 56 12 62 8 C68 12 74 18 74 25 Z" fill="#F59E0B"/>
+              <path d="M54 25 L62 14 L70 25" stroke="#DC2626" stroke-width="1.5" fill="none"/>
+              <circle cx="62" cy="14" r="2.5" fill="#DC2626"/>
+              <!-- Top Badge Header -->
+              <rect x="0" y="0" width="125" height="20" fill="rgba(180, 83, 9, 0.9)"/>
+              <text x="62" y="14" font-size="9" font-weight="bold" fill="#FEF08A" text-anchor="middle">GI TAGGED • ANDHRA</text>
+            </svg>
+          </div>
+
+          <div class="hero-copy-block">
+            <div class="hero-badge-pill">🔥 #1 TRENDING CRAFT</div>
+            <h2 class="hero-title-main">Kondapalli Toys</h2>
+            <p class="hero-subtitle-text">World-famous GI dancing dolls & wooden toys handcrafted from sacred Tella Poniki wood.</p>
+            <button class="hero-cta-btn" onclick="window.kalaApp.openFlipkartPdp(); event.stopPropagation();">
+              Shop Trending Toys →
+            </button>
+          </div>
+        </div>
+
+        <!-- Slide 2: Handmade Stories, Global Homes -->
+        <div class="hero-banner-slide hero-slide-artisan">
+          <svg style="position:absolute; right:-20px; top:-10px; width:190px; height:190px; opacity:0.18; pointer-events:none;" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" stroke="#FFF" stroke-width="2" fill="none"/>
+            <ellipse cx="100" cy="100" rx="90" ry="45" stroke="#FFF" stroke-width="1.5" fill="none"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#FFF" stroke-width="1.5"/>
+            <path d="M120 40L145 35L150 48L135 52Z" fill="#FFF"/>
+          </svg>
+
+          <div class="hero-artisan-img-wrap">
+            <svg viewBox="0 0 125 135" width="100%" height="100%">
+              <rect width="125" height="135" fill="#E8D5C4"/>
+              <circle cx="50" cy="42" r="22" fill="#A86241"/>
+              <circle cx="50" cy="36" r="24" fill="#1C1917"/>
+              <path d="M20 70C25 58 40 56 60 58C75 60 85 70 85 90H15L20 70Z" fill="#D97706"/>
+              <circle cx="50" cy="38" r="2" fill="#DC2626"/>
+              <path d="M46 47C49 50 53 50 56 47" stroke="#451A03" stroke-width="1.5" fill="none"/>
+              <path d="M52 75L68 88" stroke="#A86241" stroke-width="6" stroke-linecap="round"/>
+              <line x1="68" y1="88" x2="80" y2="98" stroke="#D97706" stroke-width="2.5"/>
+              <ellipse cx="85" cy="108" rx="28" ry="20" fill="#DC2626"/>
+              <circle cx="70" cy="98" r="15" fill="#EF4444"/>
+              <path d="M62 104C60 112 62 118 68 120" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="85" cy="106" r="5" fill="#FBBF24"/>
+              <circle cx="85" cy="106" r="2" fill="#16A34A"/>
+              <path d="M78 96C82 92 88 92 92 96" stroke="#FBBF24" stroke-width="2"/>
+            </svg>
+          </div>
+
+          <div class="hero-copy-block">
+            <div class="hero-badge-pill" style="background:#047857;">🌍 HERITAGE STORY</div>
+            <h2 class="hero-title-main">Handmade Stories, Global Homes</h2>
+            <p class="hero-subtitle-text">Support Artisans • Preserve Culture • Take Tradition to the World</p>
+            <button class="hero-cta-btn" onclick="window.kalaApp.scrollToTrending()">
+              Explore All Crafts →
+            </button>
+          </div>
+        </div>
+
+        <!-- Slide 3: Pochampally Ikat Silk -->
+        <div class="hero-banner-slide hero-slide-pochampally">
+          <div class="hero-artisan-img-wrap">
+            <svg viewBox="0 0 125 135" width="100%" height="100%">
+              <rect width="125" height="135" fill="#FCE7F3"/>
+              <rect x="15" y="15" width="95" height="105" rx="6" fill="#9D174D"/>
+              <rect x="15" y="85" width="95" height="35" fill="#F59E0B"/>
+              <polygon points="38,38 48,50 38,62 28,50" fill="#FDE047"/>
+              <polygon points="62,38 72,50 62,62 52,50" fill="#FDE047"/>
+              <polygon points="86,38 96,50 86,62 76,50" fill="#FDE047"/>
+              <line x1="15" y1="92" x2="110" y2="92" stroke="#B45309" stroke-width="2"/>
+              <line x1="15" y1="102" x2="110" y2="102" stroke="#B45309" stroke-width="2"/>
+            </svg>
+          </div>
+
+          <div class="hero-copy-block">
+            <div class="hero-badge-pill" style="background:#9D174D;">✨ ROYAL WEAVE</div>
+            <h2 class="hero-title-main">Pochampally Ikat Silk</h2>
+            <p class="hero-subtitle-text">Geometric mathematical symmetry in pure Mulberry silk woven by master weavers.</p>
+            <button class="hero-cta-btn" onclick="window.kalaApp.showProductStory('KAL-085')">
+              View Silk Weaves →
+            </button>
+          </div>
+        </div>
+
+        <!-- Slide 4: Brass & Metalwork -->
+        <div class="hero-banner-slide hero-slide-brass">
+          <div class="hero-artisan-img-wrap">
+            <svg viewBox="0 0 125 135" width="100%" height="100%">
+              <rect width="125" height="135" fill="#FFFBEB"/>
+              <ellipse cx="62" cy="110" rx="35" ry="12" fill="#B45309"/>
+              <rect x="58" y="70" width="8" height="40" fill="#D97706"/>
+              <ellipse cx="62" cy="70" rx="30" ry="10" fill="#F59E0B"/>
+              <ellipse cx="62" cy="67" rx="24" ry="7" fill="#D97706"/>
+              <path d="M62 30C66 38 70 45 62 58C54 45 58 38 62 30Z" fill="#DC2626"/>
+              <path d="M62 38C64 42 66 48 62 55C58 48 60 42 62 38Z" fill="#FEF08A"/>
+            </svg>
+          </div>
+
+          <div class="hero-copy-block">
+            <div class="hero-badge-pill" style="background:#B45309;">🪔 SACRED METALS</div>
+            <h2 class="hero-title-main">Lost-Wax Brass Diyas</h2>
+            <p class="hero-subtitle-text">Sacred temple lamps & bell metal artistry cast through ancient metallurgical traditions.</p>
+            <button class="hero-cta-btn" onclick="window.kalaApp.showProductStory('KAL-086')">
+              Explore Metalcraft →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Carousel Indicators -->
+    <div class="hero-carousel-dots" id="heroCarouselDots">
+      <div class="carousel-dot active" onclick="window.kalaApp.goToSlide(0)"></div>
+      <div class="carousel-dot" onclick="window.kalaApp.goToSlide(1)"></div>
+      <div class="carousel-dot" onclick="window.kalaApp.goToSlide(2)"></div>
+      <div class="carousel-dot" onclick="window.kalaApp.goToSlide(3)"></div>
+    </div>
+  </section>
+
+  <!-- 5 Feature Trust Cards -->
+  <section class="trust-badges-bar">
+    <div class="trust-badge-card" onclick="window.kalaApp.toast('🤝 Direct Connection to 12,000+ Verified Artisans')">
+      <span class="trust-badge-icon">🤝</span>
+      <span class="trust-badge-lbl">Meet<br>Artisans</span>
+    </div>
+    <div class="trust-badge-card" onclick="window.kalaApp.toast('🛡️ 100% Certified Authentic GI Products')">
+      <span class="trust-badge-icon">🛡️</span>
+      <span class="trust-badge-lbl">Authentic<br>Products</span>
+    </div>
+    <div class="trust-badge-card" onclick="window.kalaApp.toast('₹ Transparent Fair Pricing (68% to Artisan)')">
+      <span class="trust-badge-icon">₹</span>
+      <span class="trust-badge-lbl">Fair<br>Pricing</span>
+    </div>
+    <div class="trust-badge-card" onclick="window.kalaApp.toast('🌐 Worldwide Doorstep Shipping')">
+      <span class="trust-badge-icon">🌐</span>
+      <span class="trust-badge-lbl">Global<br>Shipping</span>
+    </div>
+    <div class="trust-badge-card" onclick="window.kalaApp.toast('🏛️ Preserving 5,000 Years of Indian Heritage')">
+      <span class="trust-badge-icon">🏛️</span>
+      <span class="trust-badge-lbl">Preserve<br>Heritage</span>
+    </div>
+  </section>
+
+  <!-- Popular Crafts Section -->
+  <section>
+    <div class="section-headline-row">
+      <h2 class="section-headline-title">Popular Crafts</h2>
+      <a href="#" class="section-view-all" onclick="window.kalaApp.filterByCategory('all'); return false;">View All →</a>
+    </div>
+    <div class="popular-crafts-row" id="popularCraftsRow">
+      <!-- Card 1: Kondapalli Toys -->
+      <div class="popular-craft-thumb-card" onclick="window.kalaApp.openFlipkartPdp()">
+        <div class="popular-craft-img-box">
+          <svg viewBox="0 0 108 82" width="100%" height="100%">
+            <rect width="108" height="82" fill="#FEF3C7"/>
+            <!-- Colorful Painted Wooden Horse -->
+            <path d="M35 55L45 32L65 32L75 55" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="55" cy="42" rx="20" ry="12" fill="#F59E0B"/>
+            <path d="M42 36L34 20C34 16 42 16 44 24L48 34" fill="#DC2626"/>
+            <!-- Saddle & Ornaments -->
+            <rect x="50" y="34" width="12" height="12" rx="2" fill="#15803D"/>
+            <rect x="52" y="36" width="8" height="8" rx="1" fill="#FEF08A"/>
+            <!-- Legs -->
+            <line x1="42" y1="52" x2="40" y2="72" stroke="#DC2626" stroke-width="4" stroke-linecap="round"/>
+            <line x1="68" y1="52" x2="70" y2="72" stroke="#DC2626" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="popular-craft-caption">Kondapalli Toys</div>
+      </div>
+
+      <!-- Card 2: Pochampally Textiles -->
+      <div class="popular-craft-thumb-card" onclick="window.kalaApp.showProductStory('KAL-085')">
+        <div class="popular-craft-img-box">
+          <svg viewBox="0 0 108 82" width="100%" height="100%">
+            <rect width="108" height="82" fill="#FCE7F3"/>
+            <!-- Magenta & Gold Silk Saree -->
+            <rect x="14" y="10" width="80" height="62" rx="4" fill="#9D174D"/>
+            <!-- Golden Zari Border -->
+            <rect x="14" y="58" width="80" height="14" fill="#F59E0B"/>
+            <!-- Ikat Diamonds -->
+            <polygon points="30,25 38,35 30,45 22,35" fill="#FDE047"/>
+            <polygon points="54,25 62,35 54,45 46,35" fill="#FDE047"/>
+            <polygon points="78,25 86,35 78,45 70,35" fill="#FDE047"/>
+            <line x1="14" y1="62" x2="94" y2="62" stroke="#B45309" stroke-width="1.5"/>
+            <line x1="14" y1="68" x2="94" y2="68" stroke="#B45309" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="popular-craft-caption">Pochampally Textiles</div>
+      </div>
+
+      <!-- Card 3: Etikoppaka Toys -->
+      <div class="popular-craft-thumb-card" onclick="window.kalaApp.showProductStory('KAL-088')">
+        <div class="popular-craft-img-box">
+          <svg viewBox="0 0 108 82" width="100%" height="100%">
+            <rect width="108" height="82" fill="#ECFDF5"/>
+            <!-- Traditional Lacquer Dancing Doll -->
+            <ellipse cx="54" cy="58" rx="16" ry="18" fill="#DC2626"/>
+            <circle cx="54" cy="32" r="10" fill="#FDE047"/>
+            <!-- Crown / Headgear -->
+            <path d="M48 24L54 14L60 24Z" fill="#15803D"/>
+            <!-- Decorative belt -->
+            <rect x="42" y="52" width="24" height="4" fill="#FDE047"/>
+            <!-- Base spindle -->
+            <ellipse cx="54" cy="74" rx="14" ry="4" fill="#047857"/>
+          </svg>
+        </div>
+        <div class="popular-craft-caption">Etikoppaka Toys</div>
+      </div>
+
+      <!-- Card 4: Madhubani Paintings -->
+      <div class="popular-craft-thumb-card" onclick="window.kalaApp.showProductStory('KAL-087')">
+        <div class="popular-craft-img-box">
+          <svg viewBox="0 0 108 82" width="100%" height="100%">
+            <rect width="108" height="82" fill="#FFFBEB"/>
+            <rect x="18" y="10" width="72" height="62" fill="#FEF08A" stroke="#B45309" stroke-width="2"/>
+            <!-- Ornate folk woman figure -->
+            <circle cx="54" cy="34" r="12" fill="#F59E0B"/>
+            <ellipse cx="56" cy="34" rx="4" ry="2" fill="#FFF"/>
+            <circle cx="56" cy="34" r="1.5" fill="#000"/>
+            <path d="M44 46C46 54 62 54 64 46" fill="#DC2626"/>
+            <!-- Lotus flowers in border -->
+            <circle cx="30" cy="60" r="4" fill="#DC2626"/>
+            <circle cx="78" cy="60" r="4" fill="#DC2626"/>
+          </svg>
+        </div>
+        <div class="popular-craft-caption">Madhubani Paintings</div>
+      </div>
+
+      <!-- Card 5: Brass & Metal Crafts -->
+      <div class="popular-craft-thumb-card" onclick="window.kalaApp.showProductStory('KAL-086')">
+        <div class="popular-craft-img-box">
+          <svg viewBox="0 0 108 82" width="100%" height="100%">
+            <rect width="108" height="82" fill="#FFFBEB"/>
+            <!-- Ornate Brass Diya -->
+            <ellipse cx="54" cy="68" rx="20" ry="6" fill="#B45309"/>
+            <rect x="52" y="44" width="4" height="24" fill="#D97706"/>
+            <ellipse cx="54" cy="44" rx="18" ry="6" fill="#F59E0B"/>
+            <ellipse cx="54" cy="42" rx="14" ry="4" fill="#D97706"/>
+            <!-- Flame -->
+            <path d="M54 22C56 26 58 30 54 36C50 30 52 26 54 22Z" fill="#DC2626"/>
+            <path d="M54 26C55 28 56 31 54 34C52 31 53 28 54 26Z" fill="#FEF08A"/>
+          </svg>
+        </div>
+        <div class="popular-craft-caption">Brass & Metal Crafts</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Products Section (Exact products from reference image) -->
+  <section id="trendingSection">
+    <div class="section-headline-row">
+      <h2 class="section-headline-title">Trending Products</h2>
+      <a href="#" class="section-view-all" onclick="window.kalaApp.filterByCategory('all'); return false;">View All →</a>
+    </div>
+    <div class="trending-products-container" id="trendingProductsContainer">
+      <!-- Card 1: Kondapalli Toys (Balaji Showpiece) -->
+      <div class="trending-item-card" onclick="window.kalaApp.openFlipkartPdp()">
+        <div class="trending-card-top" style="background:#FFF;">
+          <img src="assets/kondapalli_balaji_product.png" alt="Kondapalli Toys Balaji Showpiece" style="width:100%; height:100%; object-fit:contain; padding:4px;" />
+          <button class="card-wishlist-heart" onclick="window.kalaApp.toggleWishlist('KAL-084', event)">🤍</button>
+        </div>
+        <div class="trending-info-area">
+          <h3 class="trending-item-name">Kondapalli Balaji Showpiece</h3>
+          <div class="trending-item-price">
+            ₹347 <span style="font-size:11px; color:#878787; text-decoration:line-through;">₹799</span>
+            <span style="font-size:10.5px; color:#388E3C; font-weight:800; margin-left:4px;">57% off</span>
+          </div>
+          <div class="trending-rating-line">
+            <span class="star-symbol">★</span>
+            <span>4.3 (16)</span>
+          </div>
+          <button class="add-cart-red-btn" onclick="window.kalaApp.addToCart('KAL-084', event)">
+            🛒 Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Pochampally Saree -->
+      <div class="trending-item-card" onclick="window.kalaApp.showProductStory('KAL-085')">
+        <div class="trending-card-top">
+          <!-- Authentic magenta/gold Pochampally saree SVG -->
+          <svg viewBox="0 0 154 150" width="100%" height="100%">
+            <rect width="154" height="150" fill="#FCE7F3"/>
+            <rect x="18" y="16" width="118" height="118" rx="6" fill="#9D174D"/>
+            <rect x="18" y="98" width="118" height="36" fill="#F59E0B"/>
+            <!-- Diamond Ikat motifs -->
+            <polygon points="45,45 57,60 45,75 33,60" fill="#FDE047"/>
+            <polygon points="80,45 92,60 80,75 68,60" fill="#FDE047"/>
+            <polygon points="115,45 127,60 115,75 103,60" fill="#FDE047"/>
+            <line x1="18" y1="106" x2="136" y2="106" stroke="#78350F" stroke-width="2"/>
+            <line x1="18" y1="116" x2="136" y2="116" stroke="#78350F" stroke-width="2"/>
+          </svg>
+          <button class="card-wishlist-heart" onclick="window.kalaApp.toggleWishlist('KAL-085', event)">🤍</button>
+        </div>
+        <div class="trending-info-area">
+          <h3 class="trending-item-name">Pochampally Saree</h3>
+          <div class="trending-item-price">₹5,499</div>
+          <div class="trending-rating-line">
+            <span class="star-symbol">★</span>
+            <span>4.8 (320)</span>
+          </div>
+          <button class="add-cart-red-btn" onclick="window.kalaApp.addToCart('KAL-085', event)">
+            🛒 Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Brass Diya -->
+      <div class="trending-item-card" onclick="window.kalaApp.showProductStory('KAL-086')">
+        <div class="trending-card-top">
+          <!-- Authentic brass diya SVG -->
+          <svg viewBox="0 0 154 150" width="100%" height="100%">
+            <rect width="154" height="150" fill="#FEF3C7"/>
+            <ellipse cx="77" cy="120" rx="36" ry="10" fill="#B45309"/>
+            <rect x="74" y="60" width="6" height="60" fill="#D97706"/>
+            <!-- Lower tiered bowl -->
+            <ellipse cx="77" cy="80" rx="30" ry="10" fill="#F59E0B"/>
+            <ellipse cx="77" cy="77" rx="24" ry="6" fill="#D97706"/>
+            <!-- Top bowl -->
+            <ellipse cx="77" cy="50" rx="20" ry="7" fill="#FBBF24"/>
+            <ellipse cx="77" cy="48" rx="16" ry="4" fill="#B45309"/>
+            <!-- Sacred Flame -->
+            <path d="M77 22C80 28 84 34 77 42C70 34 74 28 77 22Z" fill="#DC2626"/>
+            <path d="M77 28C79 32 81 36 77 40C73 36 75 32 77 28Z" fill="#FEF08A"/>
+          </svg>
+          <button class="card-wishlist-heart" onclick="window.kalaApp.toggleWishlist('KAL-086', event)">🤍</button>
+        </div>
+        <div class="trending-info-area">
+          <h3 class="trending-item-name">Brass Diya</h3>
+          <div class="trending-item-price">₹1,250</div>
+          <div class="trending-rating-line">
+            <span class="star-symbol">★</span>
+            <span>4.7 (98)</span>
+          </div>
+          <button class="add-cart-red-btn" onclick="window.kalaApp.addToCart('KAL-086', event)">
+            🛒 Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Madhubani Painting -->
+      <div class="trending-item-card" onclick="window.kalaApp.showProductStory('KAL-087')">
+        <div class="trending-card-top">
+          <!-- Authentic Madhubani folk painting SVG -->
+          <svg viewBox="0 0 154 150" width="100%" height="100%">
+            <rect width="154" height="150" fill="#FFFBEB"/>
+            <rect x="18" y="14" width="118" height="122" rx="4" fill="#FEF08A" stroke="#B45309" stroke-width="3"/>
+            <!-- Foliage & Goddess portrait -->
+            <circle cx="77" cy="58" r="22" fill="#F59E0B"/>
+            <ellipse cx="80" cy="58" rx="7" ry="4" fill="#FFF"/>
+            <circle cx="80" cy="58" r="2.5" fill="#000"/>
+            <path d="M60 80C65 95 90 95 95 80" fill="#DC2626"/>
+            <circle cx="45" cy="100" r="8" fill="#DC2626"/>
+            <circle cx="109" cy="100" r="8" fill="#DC2626"/>
+          </svg>
+          <button class="card-wishlist-heart" onclick="window.kalaApp.toggleWishlist('KAL-087', event)">🤍</button>
+        </div>
+        <div class="trending-info-area">
+          <h3 class="trending-item-name">Madhubani Painting</h3>
+          <div class="trending-item-price">₹2,999</div>
+          <div class="trending-rating-line">
+            <span class="star-symbol">★</span>
+            <span>4.6 (76)</span>
+          </div>
+          <button class="add-cart-red-btn" onclick="window.kalaApp.addToCart('KAL-087', event)">
+            🛒 Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Impact Strip -->
+  <section class="mission-strip-wrapper">
+    <div class="mission-strip-card">
+      <div class="mission-text-side">
+        <h3>From Villages to the World</h3>
+        <p>Every purchase empowers an artisan directly</p>
+      </div>
+      <div class="mission-stats-group">
+        <div class="stat-unit">
+          <span class="stat-icon">🌾</span>
+          Fair Prices
+        </div>
+        <div class="stat-unit">
+          <span class="stat-icon">👥</span>
+          Direct from Artisans
+        </div>
+        <div class="stat-unit">
+          <span class="stat-icon">🌐</span>
+          Global Reach
+        </div>
+        <div class="stat-unit">
+          <span class="stat-icon">🍃</span>
+          Sustainable Impact
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom App Navigation Bar -->
+  <nav class="bottom-nav-bar">
+    <button class="bottom-nav-link active" onclick="window.kalaApp.handleNavTab('home')">
+      <span class="nav-glyph">🏠</span>
+      <span>Home</span>
+    </button>
+    <button class="bottom-nav-link" onclick="window.kalaApp.handleNavTab('explore')">
+      <span class="nav-glyph">⊞</span>
+      <span>Explore</span>
+    </button>
+    <button class="bottom-nav-link" onclick="window.kalaApp.handleNavTab('sell')">
+      <span class="nav-glyph">🏪</span>
+      <span>Sell with Us</span>
+    </button>
+    <button class="bottom-nav-link" onclick="window.kalaApp.handleNavTab('orders')">
+      <span class="nav-glyph">📋</span>
+      <span>Orders</span>
+    </button>
+    <button class="bottom-nav-link" onclick="window.kalaApp.handleNavTab('account')">
+      <span class="nav-glyph">👤</span>
+      <span>Account</span>
+    </button>
+  </nav>
+
+  <!-- Flipkart-Style Product Detail Page (PDP) for Kondapalli Toys (PALJJI HANDICRAFTS) -->
+  <!-- Flipkart-Style Product Detail Page (PDP) for Kondapalli Toys (PALJJI HANDICRAFTS) -->
+  <div class="flipkart-pdp-view" id="flipkartPdpView">
+    <!-- Top Sticky Kalavirasat Teal Header -->
+    <header class="pdp-kalavirasat-header">
+      <button class="pdp-back-white-btn" onclick="window.kalaApp.closeFlipkartPdp()" aria-label="Back">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+
+      <div class="pdp-brand-center">
+        <div class="pdp-brand-logo-line">
+          <!-- Traditional Golden Lotus Emblem -->
+          <svg width="22" height="22" viewBox="0 0 40 40" style="margin-right:6px;">
+            <path d="M20 4 C18 12 12 18 4 20 C12 22 18 28 20 36 C22 28 28 22 36 20 C28 18 22 12 20 4 Z" fill="#F59E0B"/>
+            <circle cx="20" cy="20" r="4" fill="#FEF3C7"/>
+          </svg>
+          <span class="pdp-brand-title">Kalavirasat</span>
+        </div>
+        <div class="pdp-brand-tagline">India's Heritage, Our Pride</div>
+      </div>
+
+      <div class="pdp-header-right">
+        <button class="pdp-icon-btn" onclick="window.kalaApp.toast('🔍 Search craft heritage...')" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="pdp-icon-btn pdp-cart-icon-btn" onclick="window.kalaApp.openCartSheet()" aria-label="Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="pdp-cart-badge" id="fkCartBadge">14</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Scrollable Body -->
+    <div class="fk-scroll-body">
+      <!-- Product Image Gallery Card (Exact like reference image) -->
+      <div class="pdp-gallery-card">
+        <div class="pdp-gallery-container">
+          <img src="assets/kondapalli_gallery_banner.png" alt="Kondapalli Wooden Decorative Showpiece" class="pdp-gallery-img" />
+          <button class="pdp-floating-heart-btn" onclick="window.kalaApp.toggleFkWishlist()" aria-label="Wishlist">
+            <span id="fkWishlistHeart">🤍</span>
+          </button>
+          <button class="pdp-3d-btn" onclick="window.kalaApp.open3DViewer()">
+            <span style="font-size:14px;">🧊</span> 3D View
+          </button>
+          <button class="pdp-ar-btn" onclick="window.kalaApp.openARViewer()">
+            <span style="font-size:12px; font-weight:900;">[AR]</span> AR View
+          </button>
+        </div>
+      </div>
+
+      <!-- Store / Brand Row -->
+      <div class="pdp-store-card" onclick="window.kalaApp.toast('🏪 PALJJI HANDICRAFTS - Verified Artisan Store')">
+        <div class="pdp-store-left">
+          <div class="pdp-store-icon">🏪</div>
+          <div>
+            <div class="pdp-store-name">PALJJI HANDICRAFTS <span class="pdp-arrow-gt">›</span></div>
+            <div class="pdp-store-sub">Traditional Handicrafts from Andhra Pradesh</div>
+          </div>
+        </div>
+        <div class="pdp-store-rating">
+          <span style="color:#F59E0B; font-size:13px;">★ 4.3</span>
+          <span style="color:#6B7280; font-size:11.5px;">(16 reviews)</span>
+        </div>
+      </div>
+
+      <!-- Product Title & Price Card -->
+      <div class="pdp-title-card">
+        <h1 class="pdp-main-title">Kondapalli Wooden Decorative Showpiece</h1>
+        <div class="pdp-main-subtitle">22.5 cm (Wood, Multicolor)</div>
+
+        <div class="pdp-badges-row">
+          <span class="pdp-gi-badge">📍 Authentic Kondapalli GI Craft</span>
+          <span class="pdp-stock-badge">📦 In Stock</span>
+        </div>
+
+        <div class="pdp-price-row">
+          <span class="pdp-price-big">₹347</span>
+          <span class="pdp-price-strike">₹799</span>
+          <span class="pdp-discount-pill">57% OFF</span>
+        </div>
+        <div class="pdp-tax-note">Inclusive of all taxes</div>
+      </div>
+
+      <!-- 4 Craft Highlight Badges (Exact from reference image) -->
+      <div class="pdp-highlights-grid">
+        <div class="pdp-highlight-pill" onclick="window.kalaApp.toast('🤝 Master Handcrafted by Certified Artisans')">
+          <div class="pdp-hl-icon">🏛️</div>
+          <div class="pdp-hl-text">Handcrafted<br>by Artisans</div>
+        </div>
+        <div class="pdp-highlight-pill" onclick="window.kalaApp.toast('🪵 Pure Sacred Tella Poniki Soft Wood')">
+          <div class="pdp-hl-icon">🪵</div>
+          <div class="pdp-hl-text">Made from<br>Tella Poniki wood</div>
+        </div>
+        <div class="pdp-highlight-pill" onclick="window.kalaApp.toast('📍 Kondapalli Village, Krishna District, AP')">
+          <div class="pdp-hl-icon">📍</div>
+          <div class="pdp-hl-text">From Kondapalli,<br>Andhra Pradesh</div>
+        </div>
+        <div class="pdp-highlight-pill" onclick="window.kalaApp.toast('🛡️ Official GI Registered Craft (2007)')">
+          <div class="pdp-hl-icon">🛡️</div>
+          <div class="pdp-hl-text">GI Recognized<br>Craft</div>
+        </div>
+      </div>
+
+      <!-- About This Craft Card (Exact User Requested Text & Gopuram Motif) -->
+      <div class="pdp-about-craft-card">
+        <svg class="pdp-temple-watermark" viewBox="0 0 160 220" fill="none">
+          <path d="M80 10 L60 40 H100 Z" stroke="#B45309" stroke-width="2"/>
+          <path d="M50 40 L40 80 H120 L110 40 Z" stroke="#B45309" stroke-width="2"/>
+          <path d="M35 80 L25 130 H135 L125 80 Z" stroke="#B45309" stroke-width="2"/>
+          <path d="M20 130 L10 190 H150 L140 130 Z" stroke="#B45309" stroke-width="2"/>
+          <rect x="5" y="190" width="150" height="25" stroke="#B45309" stroke-width="2"/>
+          <path d="M70 190 V215 M90 190 V215" stroke="#B45309" stroke-width="1.5"/>
+          <circle cx="80" cy="8" r="4" fill="#B45309"/>
+        </svg>
+
+        <h2 class="pdp-about-title">About This Craft</h2>
+        <div class="pdp-about-body-text" id="pdpAboutBody">
+          <p><strong>Kondapalli Toys – The Colourful Wooden Heritage of Andhra Pradesh</strong></p>
+          <p>Discover the timeless beauty of Kondapalli Toys, a traditional wooden craft originating from Kondapalli, near Vijayawada in Andhra Pradesh. Handcrafted from lightweight Tella Poniki wood, these colourful creations portray village life, farmers, animals, musicians, mythological characters, and traditional celebrations.</p>
+          <div class="pdp-about-expanded-text" id="pdpAboutExpanded">
+            <p>Created through generations of inherited craftsmanship, every toy reflects the creativity, cultural knowledge, and artistic identity of its makers. Recognised with a Geographical Indication (GI) tag in 2007, Kondapalli Toys remain an important part of Andhra Pradesh's handicraft heritage.</p>
+            <p>Explore their history, discover the traditional carving and painting techniques, and learn how artisan communities preserve this remarkable art. Through Kalavirasat's digital heritage experience, connect with the stories, traditions, and craftsmanship behind every creation.</p>
+          </div>
+        </div>
+        <button class="pdp-read-more-btn" id="pdpReadMoreBtn" onclick="window.kalaApp.toggleAboutCraftText()">
+          Read more ⌵
+        </button>
+      </div>
+
+      <!-- Accordions Group (Exact from reference image) -->
+      <div class="pdp-accordions-group">
+        <!-- Accordion 1: History & Cultural Significance -->
+        <div class="pdp-accordion-item">
+          <div class="pdp-accordion-header" onclick="window.kalaApp.togglePdpAccordion(this)">
+            <div class="pdp-acc-title-left">
+              <span class="pdp-acc-icon">🏛️</span>
+              <span class="pdp-acc-title">History & Cultural Significance</span>
+            </div>
+            <span class="pdp-acc-chevron">⌄</span>
+          </div>
+          <div class="pdp-accordion-panel">
+            <p>The art of Kondapalli toy making boasts a 400-year legacy tracing back to the 16th century, patronized by the rulers of the Reddy and Vijayanagara dynasties. Carried forward by the <em>Aryakshatriya</em> artisan community who migrated from Rajasthan, these sacred dolls are historically gifted during Navaratri and Sankranti Bommala Koluvu celebrations.</p>
+          </div>
+        </div>
+
+        <!-- Accordion 2: Materials & Making Process -->
+        <div class="pdp-accordion-item">
+          <div class="pdp-accordion-header" onclick="window.kalaApp.togglePdpAccordion(this)">
+            <div class="pdp-acc-title-left">
+              <span class="pdp-acc-icon">⚙️</span>
+              <span class="pdp-acc-title">Materials & Making Process</span>
+            </div>
+            <span class="pdp-acc-chevron">⌄</span>
+          </div>
+          <div class="pdp-accordion-panel">
+            <p>Crafted exclusively from <em>Tella Poniki</em> (Givotia rottleriformis), a soft, pliable, and sustainable medicinal wood. After hand-carving individual limbs and features, artisans join the parts using <em>Lappam</em> (a natural paste of sawdust and tamarind seed glue). Once smooth, artisans apply vibrant non-toxic lacquers, water-based enamel, and natural vegetable dyes.</p>
+          </div>
+        </div>
+
+        <!-- Accordion 3: Meet the Artisan -->
+        <div class="pdp-accordion-item">
+          <div class="pdp-accordion-header" onclick="window.kalaApp.togglePdpAccordion(this)">
+            <div class="pdp-acc-title-left">
+              <span class="pdp-acc-icon">👤</span>
+              <span class="pdp-acc-title">Meet the Artisan</span>
+            </div>
+            <span class="pdp-acc-chevron">⌄</span>
+          </div>
+          <div class="pdp-accordion-panel">
+            <div style="display:flex; gap:12px; align-items:center; margin-bottom:8px;">
+              <div style="font-size:32px;">👩‍🎨</div>
+              <div>
+                <strong>Lakshmi Devi & Family</strong><br>
+                <span style="font-size:12px; color:#6B7280;">Master Artisan, 3rd Generation • Kondapalli Village</span>
+              </div>
+            </div>
+            <p style="font-style:italic; background:#FFFBEB; padding:8px 10px; border-left:3px solid #D97706; border-radius:4px;">
+              "ఇది మా తాతగారు నేర్పిన తెల్ల పొనికి చెక్క వెంకటేశ్వర స్వామి బొమ్మ. రంగులన్నీ సహజమైనవే."
+            </p>
+            <p>Through Kalavirasat and ONDC, ₹236 (68% of price) is transferred directly to Lakshmi Devi's bank account without middlemen deductions.</p>
+          </div>
+        </div>
+
+        <!-- Accordion 4: Product Specifications -->
+        <div class="pdp-accordion-item">
+          <div class="pdp-accordion-header" onclick="window.kalaApp.togglePdpAccordion(this)">
+            <div class="pdp-acc-title-left">
+              <span class="pdp-acc-icon">📋</span>
+              <span class="pdp-acc-title">Product Specifications</span>
+            </div>
+            <span class="pdp-acc-chevron">⌄</span>
+          </div>
+          <div class="pdp-accordion-panel">
+            <table class="fk-specs-table">
+              <tr><td>Brand</td><td>PALJJI HANDICRAFTS</td></tr>
+              <tr><td>Craft Form</td><td>Kondapalli Woodcraft (GI Tagged)</td></tr>
+              <tr><td>Deity / Model</td><td>Lord Balaji / Venkateswara Showpiece</td></tr>
+              <tr><td>Material</td><td>Tella Poniki Soft Wood</td></tr>
+              <tr><td>Finish</td><td>Multi-color Lacquer & Organic Pigments</td></tr>
+              <tr><td>Height</td><td>22.5 cm (Showpiece)</td></tr>
+              <tr><td>Weight</td><td>380 grams</td></tr>
+              <tr><td>Country of Origin</td><td>India (Andhra Pradesh)</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Accordion 5: Care Instructions -->
+        <div class="pdp-accordion-item">
+          <div class="pdp-accordion-header" onclick="window.kalaApp.togglePdpAccordion(this)">
+            <div class="pdp-acc-title-left">
+              <span class="pdp-acc-icon">🤲</span>
+              <span class="pdp-acc-title">Care Instructions</span>
+            </div>
+            <span class="pdp-acc-chevron">⌄</span>
+          </div>
+          <div class="pdp-accordion-panel">
+            <ul style="padding-left:18px; margin:0; font-size:12.5px; line-height:1.6; color:#4B5563;">
+              <li>Clean gently with a dry, soft cotton or microfiber cloth.</li>
+              <li>Do not wash with water or submerge in liquids.</li>
+              <li>Keep away from prolonged direct harsh sunlight to preserve the vibrant organic vegetable colors.</li>
+              <li>Avoid harsh chemical cleaners or abrasive scouring pads.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Ratings & Reviews Section (Retained Flipkart Platform UI) -->
+      <div class="fk-section-card fk-reviews-section">
+        <div class="fk-reviews-header-row">
+          <div>
+            <h3 class="fk-card-heading" style="margin-bottom:2px;">Ratings & Reviews</h3>
+            <div class="fk-ratings-summary-sub">16 Ratings & 8 Reviews</div>
+          </div>
+          <button class="fk-rate-btn" onclick="window.kalaApp.writeReview()">Rate Product</button>
+        </div>
+
+        <div class="fk-ratings-score-grid">
+          <div class="fk-big-score-box">
+            <div class="fk-big-score-num">4.3 <span class="fk-star-symbol">★</span></div>
+            <div class="fk-score-verified-text">Very Good</div>
+          </div>
+          <div class="fk-rating-bars-column">
+            <div class="fk-bar-row">
+              <span>5★</span>
+              <div class="fk-bar-bg"><div class="fk-bar-fill green-bar" style="width: 72%;"></div></div>
+              <span class="fk-bar-count">11</span>
+            </div>
+            <div class="fk-bar-row">
+              <span>4★</span>
+              <div class="fk-bar-bg"><div class="fk-bar-fill green-bar" style="width: 20%;"></div></div>
+              <span class="fk-bar-count">3</span>
+            </div>
+            <div class="fk-bar-row">
+              <span>3★</span>
+              <div class="fk-bar-bg"><div class="fk-bar-fill yellow-bar" style="width: 8%;"></div></div>
+              <span class="fk-bar-count">1</span>
+            </div>
+            <div class="fk-bar-row">
+              <span>2★</span>
+              <div class="fk-bar-bg"><div class="fk-bar-fill orange-bar" style="width: 0%;"></div></div>
+              <span class="fk-bar-count">0</span>
+            </div>
+            <div class="fk-bar-row">
+              <span>1★</span>
+              <div class="fk-bar-bg"><div class="fk-bar-fill red-bar" style="width: 5%;"></div></div>
+              <span class="fk-bar-count">1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Customer Review Cards -->
+        <div class="fk-review-card">
+          <div class="fk-rev-rating-pill">5 ★</div>
+          <div class="fk-rev-headline">Simply awesome! Authentic Kondapalli craft.</div>
+          <div class="fk-rev-body">
+            The wood quality is very lightweight and genuine Tella Poniki medicinal wood. The Balaji carving and traditional lacquer painting is breathtaking. Placed it in my pooja room, looks divine!
+          </div>
+          <div class="fk-rev-author-line">
+            <span class="fk-rev-author">Venkata Rao, Vijayawada</span>
+            <span class="fk-certified-tag">✔ Certified Buyer</span>
+            <span class="fk-rev-time">• 3 days ago</span>
+          </div>
+          <div class="fk-rev-helpful-line">
+            <span class="fk-helpful-btn" onclick="window.kalaApp.upvoteReview(this)">👍 14</span>
+            <span class="fk-helpful-btn">👎 0</span>
+          </div>
+        </div>
+
+        <div class="fk-review-card">
+          <div class="fk-rev-rating-pill">5 ★</div>
+          <div class="fk-rev-headline">Worth every penny! Supporting direct artisans.</div>
+          <div class="fk-rev-body">
+            Packaging was excellent with shockproof protection. Colors are vivid and natural oil-based lacquer. Happy to know 68% directly goes to the artisan family!
+          </div>
+          <div class="fk-rev-author-line">
+            <span class="fk-rev-author">Kavitha Reddy, Hyderabad</span>
+            <span class="fk-certified-tag">✔ Certified Buyer</span>
+            <span class="fk-rev-time">• 1 week ago</span>
+          </div>
+          <div class="fk-rev-helpful-line">
+            <span class="fk-helpful-btn" onclick="window.kalaApp.upvoteReview(this)">👍 9</span>
+            <span class="fk-helpful-btn">👎 0</span>
+          </div>
+        </div>
+
+        <div class="fk-review-card">
+          <div class="fk-rev-rating-pill">4 ★</div>
+          <div class="fk-rev-headline">Good craftsmanship and finish</div>
+          <div class="fk-rev-body">
+            Traditional Kondapalli art is well preserved. Finishing on the ear discs and crown is so detailed. Delivery was quick by tomorrow.
+          </div>
+          <div class="fk-rev-author-line">
+            <span class="fk-rev-author">Ramesh Kumar, Visakhapatnam</span>
+            <span class="fk-certified-tag">✔ Certified Buyer</span>
+            <span class="fk-rev-time">• 2 weeks ago</span>
+          </div>
+          <div class="fk-rev-helpful-line">
+            <span class="fk-helpful-btn" onclick="window.kalaApp.upvoteReview(this)">👍 5</span>
+            <span class="fk-helpful-btn">👎 1</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Similar / Related Products Section (Retained Flipkart Platform UI) -->
+      <div class="fk-section-card fk-related-section">
+        <div class="fk-section-title-row">
+          <h3 class="fk-card-heading">Similar Products</h3>
+          <span class="fk-view-all-text" onclick="window.kalaApp.filterByCategory('Wood Crafts'); window.kalaApp.closeFlipkartPdp();">View All →</span>
+        </div>
+
+        <div class="fk-related-scroll-row">
+          <!-- Card 1: Kondapalli Dancing Doll (Aata Bomma) -->
+          <div class="fk-related-card" onclick="window.kalaApp.toast('Kondapalli Dancing Doll selected')">
+            <div class="fk-related-img-wrap">
+              <svg viewBox="0 0 100 100" width="100%" height="100%">
+                <rect width="100" height="100" fill="#FEF3C7"/>
+                <ellipse cx="50" cy="85" rx="30" ry="8" fill="#92400E"/>
+                <path d="M28 80 C28 55 38 42 50 42 C62 42 72 55 72 80 Z" fill="#DC2626"/>
+                <path d="M30 68 Q50 75 70 68" stroke="#FBBF24" stroke-width="2.5" fill="none"/>
+                <circle cx="50" cy="30" r="12" fill="#FDE047"/>
+                <circle cx="50" cy="27" r="1.5" fill="#DC2626"/>
+                <path d="M40 22 C40 16 45 10 50 7 C55 10 60 16 60 22 Z" fill="#F59E0B"/>
+              </svg>
+              <span class="fk-rel-discount">45% off</span>
+            </div>
+            <div class="fk-related-info">
+              <div class="fk-rel-title">Kondapalli Dancing Doll (Aata Bomma)</div>
+              <div class="fk-rel-rating">4.8 ★</div>
+              <div class="fk-rel-price-row">
+                <span class="fk-rel-price">₹420</span>
+                <span class="fk-rel-strike">₹760</span>
+              </div>
+              <button class="fk-rel-add-btn" onclick="window.kalaApp.addToCart('KAL-084', event)">+ Add</button>
+            </div>
+          </div>
+
+          <!-- Card 2: Kondapalli Royal Ambari Elephant -->
+          <div class="fk-related-card" onclick="window.kalaApp.toast('Royal Ambari Elephant selected')">
+            <div class="fk-related-img-wrap">
+              <svg viewBox="0 0 100 100" width="100%" height="100%">
+                <rect width="100" height="100" fill="#FEF3C7"/>
+                <ellipse cx="52" cy="55" rx="26" ry="18" fill="#DC2626"/>
+                <circle cx="35" cy="46" r="15" fill="#EF4444"/>
+                <path d="M25 50 C23 60 26 66 32 68" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
+                <rect x="42" y="32" width="20" height="12" rx="3" fill="#F59E0B"/>
+                <polygon points="52,24 44,32 60,32" fill="#15803D"/>
+                <circle cx="52" cy="55" r="4" fill="#FBBF24"/>
+                <rect x="36" y="70" width="8" height="18" fill="#DC2626" rx="3"/>
+                <rect x="60" y="70" width="8" height="18" fill="#DC2626" rx="3"/>
+              </svg>
+              <span class="fk-rel-discount">40% off</span>
+            </div>
+            <div class="fk-related-info">
+              <div class="fk-rel-title">Kondapalli Royal Ambari Elephant</div>
+              <div class="fk-rel-rating">4.7 ★</div>
+              <div class="fk-rel-price-row">
+                <span class="fk-rel-price">₹590</span>
+                <span class="fk-rel-strike">₹990</span>
+              </div>
+              <button class="fk-rel-add-btn" onclick="window.kalaApp.toast('Added Elephant to Cart')">+ Add</button>
+            </div>
+          </div>
+
+          <!-- Card 3: Etikoppaka Lacquer Raja Rani Set -->
+          <div class="fk-related-card" onclick="window.kalaApp.toast('Etikoppaka Raja Rani selected')">
+            <div class="fk-related-img-wrap">
+              <svg viewBox="0 0 100 100" width="100%" height="100%">
+                <rect width="100" height="100" fill="#ECFDF5"/>
+                <ellipse cx="38" cy="65" rx="14" ry="16" fill="#DC2626"/>
+                <circle cx="38" cy="42" r="9" fill="#FDE047"/>
+                <path d="M33 34 L38 25 L43 34 Z" fill="#15803D"/>
+                <ellipse cx="65" cy="65" rx="14" ry="16" fill="#F59E0B"/>
+                <circle cx="65" cy="42" r="9" fill="#FDE047"/>
+                <circle cx="65" cy="32" r="6" fill="#9D174D"/>
+              </svg>
+              <span class="fk-rel-discount">52% off</span>
+            </div>
+            <div class="fk-related-info">
+              <div class="fk-rel-title">Etikoppaka Lacquer Raja Rani Set</div>
+              <div class="fk-rel-rating">4.6 ★</div>
+              <div class="fk-rel-price-row">
+                <span class="fk-rel-price">₹360</span>
+                <span class="fk-rel-strike">₹750</span>
+              </div>
+              <button class="fk-rel-add-btn" onclick="window.kalaApp.toast('Added Raja Rani Set to Cart')">+ Add</button>
+            </div>
+          </div>
+
+          <!-- Card 4: Kondapalli Bullock Cart -->
+          <div class="fk-related-card" onclick="window.kalaApp.toast('Bullock Cart selected')">
+            <div class="fk-related-img-wrap">
+              <svg viewBox="0 0 100 100" width="100%" height="100%">
+                <rect width="100" height="100" fill="#FEF3C7"/>
+                <circle cx="35" cy="65" r="16" stroke="#92400E" stroke-width="4" fill="#FEF08A"/>
+                <circle cx="70" cy="65" r="16" stroke="#92400E" stroke-width="4" fill="#FEF08A"/>
+                <line x1="20" y1="52" x2="85" y2="52" stroke="#B45309" stroke-width="4"/>
+                <path d="M35 52 Q52 30 70 52" stroke="#DC2626" stroke-width="4" fill="none"/>
+                <ellipse cx="52" cy="46" rx="8" ry="10" fill="#F59E0B"/>
+              </svg>
+              <span class="fk-rel-discount">38% off</span>
+            </div>
+            <div class="fk-related-info">
+              <div class="fk-rel-title">Kondapalli Village Bullock Cart</div>
+              <div class="fk-rel-rating">4.5 ★</div>
+              <div class="fk-rel-price-row">
+                <span class="fk-rel-price">₹480</span>
+                <span class="fk-rel-strike">₹780</span>
+              </div>
+              <button class="fk-rel-add-btn" onclick="window.kalaApp.toast('Added Bullock Cart to Cart')">+ Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Chat Assistant Action Button -->
+    <div class="pdp-floating-chat-btn" onclick="window.kalaApp.openHeritageChat()">
+      <div class="pdp-chat-circle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span class="pdp-chat-unread-dot"></span>
+      </div>
+      <span class="pdp-chat-bubble-label">Chat with Artisan</span>
+    </div>
+
+    <!-- Sticky Bottom Action Bar (Matching Reference Design) -->
+    <div class="pdp-sticky-bottom-bar">
+      <button class="pdp-add-cart-outline-btn" onclick="window.kalaApp.addToCartFk()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E4854" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span>Add to cart</span>
+      </button>
+      <button class="pdp-buy-now-gold-btn" onclick="window.kalaApp.buyNowFk()">
+        <span style="font-size:16px;">⚡</span>
+        <span>Buy now</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Product Detail Modal Bottom Sheet -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="bottom-sheet-content" id="productSheetContent"></div>
+  </div>
+
+  <!-- Cart Modal Bottom Sheet -->
+  <div class="modal-backdrop" id="cartModal">
+    <div class="bottom-sheet-content" id="cartSheetContent"></div>
+  </div>
+
+  <!-- Saathi Voice Bridge - Buyer to Artisan Communication Drawer -->
+  <div class="saathi-modal-backdrop" id="saathiVoiceBridgeModal">
+    <div class="saathi-drawer-sheet">
+      <!-- Top Teal Header matching reference image -->
+      <div class="saathi-header">
+        <div class="saathi-header-left">
+          <button class="pdp-back-white-btn" onclick="window.kalaApp.closeSaathiModal()" aria-label="Back" style="margin-right:2px; padding:4px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <div class="saathi-headphone-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+            </svg>
+          </div>
+          <div>
+            <h2 class="saathi-header-title">Chat with Artisan</h2>
+            <div class="saathi-header-sub">Kondapalli Wooden Showpiece</div>
+          </div>
+        </div>
+        <div class="saathi-header-right">
+          <div class="saathi-verified-shield" title="Verified Artisan GI Protection">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A7F3D0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <button class="saathi-close-btn" onclick="window.kalaApp.closeSaathiModal()" aria-label="Close">✕</button>
+        </div>
+      </div>
+
+      <!-- Scrollable Content -->
+      <div class="saathi-body" id="saathiScrollBody">
+        <!-- 1. Enquiring Product Card (Exact match with reference image) -->
+        <div>
+          <div class="saathi-section-label">You are enquiring about this product</div>
+          <div class="saathi-product-card">
+            <img src="assets/kondapalli_balaji_product.png" alt="Kondapalli Wooden Showpiece" class="saathi-product-thumb" />
+            <div class="saathi-product-details">
+              <div class="saathi-product-title">Kondapalli Wooden Showpiece</div>
+              <div class="saathi-product-price">₹347</div>
+              <div class="saathi-product-seller">Seller: Paljji Handicrafts</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. How can we help? (4 Quick Action Cards matching reference image) -->
+        <div>
+          <div class="saathi-section-label" style="font-size:15px; font-weight:700; color:#FFFFFF;">How can we help?</div>
+          <div class="saathi-options-grid">
+            <!-- Card 1: Customize product -->
+            <div class="saathi-option-card selected" id="optCustomize" onclick="window.kalaApp.selectSaathiIntent('customize')">
+              <div class="saathi-opt-icon">🎨</div>
+              <div class="saathi-opt-title">Customize product</div>
+              <div class="saathi-opt-sub">Colour, design, name or size</div>
+            </div>
+
+            <!-- Card 2: Bulk order -->
+            <div class="saathi-option-card" id="optBulk" onclick="window.kalaApp.selectSaathiIntent('bulk')">
+              <div class="saathi-opt-icon">📦</div>
+              <div class="saathi-opt-title">Bulk order</div>
+              <div class="saathi-opt-sub">Quantity and wholesale pricing</div>
+            </div>
+
+            <!-- Card 3: Ask a question -->
+            <div class="saathi-option-card" id="optQuestion" onclick="window.kalaApp.selectSaathiIntent('question')">
+              <div class="saathi-opt-icon">❓</div>
+              <div class="saathi-opt-title">Ask a question</div>
+              <div class="saathi-opt-sub">Materials, quality and delivery</div>
+            </div>
+
+            <!-- Card 4: Language support -->
+            <div class="saathi-option-card" id="optLanguage" onclick="window.kalaApp.selectSaathiIntent('language')">
+              <div class="saathi-opt-icon">🔤</div>
+              <div class="saathi-opt-title">Language support</div>
+              <div class="saathi-opt-sub">Communicate across languages</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Live Chat visible to Buyer (Down to the 4 boxes) -->
+        <div class="saathi-live-chat-section">
+          <div class="saathi-chat-header-bar">
+            <span class="saathi-chat-title">Conversation with Artisan</span>
+            <span class="saathi-online-status-pill">
+              <span class="saathi-green-dot"></span>
+              Lakshmi Devi (Online)
+            </span>
+          </div>
+
+          <!-- Messages Stream Container -->
+          <div class="saathi-chat-stream-box" id="saathiChatStreamBox">
+            <!-- 1. Buyer's Sent Message Bubble -->
+            <div class="saathi-chat-bubble buyer-bubble" id="saathiBuyerBubble">
+              <div class="saathi-bubble-sender">You (Buyer)</div>
+              <div class="saathi-buyer-text" id="saathiBuyerDisplayText">
+                Can you make this toy in blue and add my name VINAY? I need 20 pieces.
+              </div>
+              <div class="saathi-bubble-chips">
+                <span class="saathi-chip">🎨 Blue</span>
+                <span class="saathi-chip">🏷️ Name: VINAY</span>
+                <span class="saathi-chip">📦 20 pieces</span>
+                <span class="saathi-chip">📅 Dec 10</span>
+              </div>
+              <!-- Spoken Audio Note Preview Generated for Artisan in Telugu -->
+              <div class="saathi-buyer-voice-bar" onclick="window.kalaApp.toggleTeluguAudio()">
+                <button class="saathi-buyer-play-btn" id="saathiAudioPlayBtn">▶</button>
+                <div class="saathi-buyer-voice-info">
+                  <div class="saathi-buyer-voice-title" id="saathiAudioStatusLabel">Spoken Telugu Audio (తెలుగు వాయిస్)</div>
+                  <div class="saathi-buyer-voice-meta">0:14 • Delivered to Artisan's WhatsApp ✓✓</div>
+                </div>
+              </div>
+              <div class="saathi-bubble-timestamp">9:42 PM • Transmitted via Saathi AI ✓✓</div>
+            </div>
+
+            <!-- 2. Seller's Sent Message (Artisan Response visible directly under Buyer's message) -->
+            <div class="saathi-seller-reply-card" id="saathiChatSellerResponse">
+              <div class="saathi-seller-header">
+                <div class="saathi-seller-avatar-wrap">
+                  <img src="assets/kondapalli_balaji_product.png" class="saathi-seller-avatar" alt="Lakshmi Devi" />
+                  <span class="saathi-online-indicator"></span>
+                </div>
+                <div class="saathi-seller-info">
+                  <div class="saathi-seller-name">
+                    Lakshmi Devi (Paljji Handicrafts)
+                    <span class="saathi-seller-badge">Seller / Master Artisan</span>
+                  </div>
+                  <div class="saathi-seller-status">Kondapalli, Krishna Dist • Verified GI Artisan</div>
+                </div>
+                <div class="saathi-reply-time">Just now</div>
+              </div>
+
+              <!-- Seller's Telugu Message -->
+              <div class="saathi-seller-telugu-bubble">
+                <div class="saathi-seller-telugu-text" id="saathiSellerTeluguText">
+                  "నమస్కారం! అవును, నీలం రంగులో 'VINAY' పేరుతో 20 బొమ్మలు డిసెంబర్ 10లోపు చేసి పంపించగలం. ధర ₹347 చొప్పున మొత్తం ₹6,940."
+                </div>
+                <!-- Spoken Audio for Seller's Voice Reply -->
+                <div class="saathi-seller-audio-bar">
+                  <button class="saathi-seller-play-btn" id="saathiSellerPlayBtn" onclick="window.kalaApp.playSellerAudio(this)">
+                    ▶
+                  </button>
+                  <div class="saathi-seller-audio-details">
+                    <span style="font-weight:700; color:#FFFFFF;">Artisan Telugu Audio Voice Note</span>
+                    <span style="color:#A7F3D0; font-size:11px;">0:12</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Seller's Message Translated to English for Buyer -->
+              <div class="saathi-seller-english-translation">
+                <div class="saathi-trans-label">Translated to English:</div>
+                <div class="saathi-trans-content" id="saathiSellerEnglishText">
+                  "Namaste! Yes, we can make 20 blue showpieces with 'VINAY' name before Dec 10 at ₹347 each (Total ₹6,940)."
+                </div>
+              </div>
+
+              <!-- Direct Buyer Action Buttons -->
+              <div class="saathi-seller-actions">
+                <button class="saathi-accept-order-btn" onclick="window.kalaApp.acceptCustomArtisanOrder(6940, 20)">
+                  ⚡ Accept & Order Custom Pieces (₹6,940)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Chat Input Row -->
+          <div class="saathi-chat-input-bar">
+            <input type="text" class="saathi-chat-input-field" id="saathiBuyerInput" placeholder="Type message to artisan in English or Telugu..." value="Can you make this toy in blue and add my name VINAY? I need 20 pieces." />
+            <button class="saathi-mic-circle-btn" id="saathiVoiceRecordBtn" onclick="window.kalaApp.toggleSpeechInput()" title="Voice input in English or any language">
+              🎙️
+            </button>
+            <button class="saathi-send-circle-btn" id="saathiSendBtn" onclick="window.kalaApp.sendBuyerChatMessage()" title="Send Message">
+              ➤
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Output Container (for additional workflow feedback) -->
+        <div id="saathiWorkflowOutput"></div>
+      </div>
+
+      <!-- Small Floating WhatsApp Icon in the down of the page -->
+      <button class="saathi-wa-floating-btn" id="saathiWaFloatingBtn" onclick="window.kalaApp.openArtisanWhatsApp()" title="Open WhatsApp View" aria-label="Open WhatsApp View">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <path fill="#FFFFFF" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2Z" />
+          <path fill="#25D366" d="M17.5 14.33C17.2 14.18 15.73 13.45 15.45 13.35C15.18 13.25 14.98 13.2 14.78 13.5C14.58 13.8 14.01 14.47 13.83 14.67C13.66 14.87 13.48 14.9 13.18 14.75C12.88 14.6 11.62 14.19 10.12 12.85C8.95 11.8 8.16 10.51 7.93 10.11C7.71 9.71 7.91 9.5 8.06 9.35C8.19 9.22 8.36 9 8.51 8.82C8.66 8.65 8.71 8.52 8.81 8.32C8.91 8.12 8.86 7.95 8.78 7.8C8.71 7.65 8.11 6.17 7.86 5.57C7.61 4.97 7.36 5.07 7.18 5.07C7 5.07 6.81 5.07 6.61 5.07C6.41 5.07 6.08 5.15 5.81 5.45C5.53 5.75 4.76 6.47 4.76 7.95C4.76 9.42 5.83 10.85 5.98 11.05C6.13 11.25 8.08 14.24 11.07 15.53C11.78 15.84 12.34 16.02 12.77 16.16C13.49 16.39 14.14 16.36 14.66 16.28C15.24 16.19 16.45 15.55 16.7 14.85C16.95 14.15 16.95 13.55 16.88 13.42C16.8 13.3 16.6 13.23 16.3 13.08L17.5 14.33Z" />
+        </svg>
+        <span class="saathi-wa-dot"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- WhatsApp Artisan Demo Inbox Modal (Step 7) -->
+  <div class="wa-inbox-backdrop" id="artisanWhatsAppModal">
+    <div class="wa-phone-container">
+      <!-- WhatsApp Top Header (Artisan Seller Phone View) -->
+      <div class="wa-header">
+        <div class="wa-header-left">
+          <button class="wa-back-btn" onclick="window.kalaApp.closeArtisanWhatsApp()" aria-label="Back">←</button>
+          <div class="wa-avatar" style="background:#00A884; display:flex; align-items:center; justify-content:center; color:#FFF; font-weight:800; font-size:16px;">V</div>
+          <div class="wa-user-info">
+            <div class="wa-user-name">Vinay (Buyer • Bangalore)</div>
+            <div class="wa-user-status">Online • Kondapalli Custom Order</div>
+          </div>
+        </div>
+        <div class="wa-header-right">
+          <span class="wa-header-icon" onclick="window.kalaApp.toast('📞 Voice call connected to Buyer')">📞</span>
+          <span class="wa-header-icon" onclick="window.kalaApp.toast('🎥 Video call available')">📹</span>
+          <span class="wa-header-icon" onclick="window.kalaApp.closeArtisanWhatsApp()">✕</span>
+        </div>
+      </div>
+
+      <!-- Seller Context Banner -->
+      <div style="background:#054D44; color:#A7F3D0; font-size:11px; padding:6px 14px; display:flex; align-items:center; justify-content:space-between; flex-shrink:0;">
+        <span>📱 Artisan Seller WhatsApp: <strong>Paljji Handicrafts (Lakshmi Devi)</strong></span>
+        <span>✓ Verified GI</span>
+      </div>
+
+      <!-- WhatsApp Messages Stream -->
+      <div class="wa-chat-body" id="waChatBody">
+        <div class="wa-date-pill">TODAY</div>
+        <div class="wa-security-notice">
+          🔒 Messages to this chat are secured with end-to-end encryption and powered by <strong>Kalavirasat Saathi Voice Bridge</strong>.
+        </div>
+
+        <!-- Dynamic Incoming & Outgoing WhatsApp Bubbles will be injected here -->
+        <div id="waMessagesStream"></div>
+      </div>
+
+      <!-- Artisan Quick Reply & Input Area -->
+      <div class="wa-reply-section">
+        <div class="wa-quick-replies-label">Quick Telugu Artisan Responses:</div>
+        <div class="wa-chips-row">
+          <button class="wa-chip-btn" onclick="window.kalaApp.sendArtisanReply('నమస్కారం! అవును, నీలం రంగులో \'VINAY\' పేరుతో 20 బొమ్మలు డిసెంబర్ 10లోపు చేసి పంపించగలం. ధర ₹347 చొప్పున మొత్తం ₹6,940.')">
+            ✓ Yes, 20 blue pcs with name by Dec 10 (₹6,940)
+          </button>
+          <button class="wa-chip-btn" onclick="window.kalaApp.sendArtisanReply('అవును, మేము తయారు చేయగలం. అడ్వాన్స్ ఆర్డర్ ఖరారు చేయండి.')">
+            ✓ Ready to craft. Please confirm order.
+          </button>
+          <button class="wa-chip-btn" onclick="window.kalaApp.sendArtisanReply('తెల్ల పొనికి సహజ రంగులతో సిద్ధం చేస్తాము. డెలివరీ 7 రోజుల్లో.')">
+            ✓ Natural Poniki wood in 7 days
+          </button>
+        </div>
+
+        <div class="wa-input-row">
+          <input type="text" class="wa-text-input" id="waCustomReplyInput" placeholder="Type message in Telugu or English..." />
+          <button class="wa-send-circle-btn" onclick="window.kalaApp.sendCustomArtisanReply()">
+            ➤
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Alert -->
+  <div class="app-toast-alert" id="toastAlert"></div>
+
+  <!-- Standalone Script -->
+  <script src="app.js"></script>
+</body>
+</html>
