@@ -1,6 +1,6 @@
 # KalaSetu (कला सेतु • కళా సేతు) — Story-Trust ONDC Buyer App
 
-> **"Story You Can Trust — 94% Faithfulness Verified • Artisan Gets 68%"**
+> **"Story You Can Trust —  Faithfulness Verified • Artisan Gets "**
 
 KalaSetu is a next-generation cultural preservation platform and ONDC Buyer Web Application that directly connects traditional Indian artisans and weavers to buyers, eliminating predatory middleman commissions.
 
